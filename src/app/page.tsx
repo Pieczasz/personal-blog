@@ -8,8 +8,8 @@ export default async function Home() {
   const session = await getServerAuthSession();
 
   return (
-    <main className="min-h-screen dark:bg-[#171614]">
-      <div className="flex w-full items-center justify-center bg-[#FFF8EA] py-20 dark:bg-background">
+    <main className="min-h-screen]">
+      <div className="flex w-full items-center justify-center bg-[#FFF8EA] py-20">
         <MaxWidthWrapper className="space-y-3 text-center">
           <h1 className="px-4 text-5xl font-bold">Blog of Teen Developer</h1>
           <h2 className="px-4 text-2xl">

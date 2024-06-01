@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-black py-16 dark:bg-transparent">
+    <footer className="bg-black py-16">
       <MaxWidthWrapper className="flex flex-col items-center justify-center space-y-3">
         <Link href="/" className="group relative">
           <h2 className="text-lg font-bold text-white transition-all duration-300">

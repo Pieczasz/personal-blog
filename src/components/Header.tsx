@@ -9,7 +9,7 @@ import Socials from "@/components/Socials";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-[#FFF8EA] py-10 dark:bg-transparent">
+    <header className="bg-[#FFF8EA] py-10">
       <div className="container max-w-screen-xl">
         <div className="flex items-center justify-between">
           <Link href="/" className="group relative">
