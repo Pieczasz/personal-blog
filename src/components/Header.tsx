@@ -2,15 +2,15 @@
 
 // Components
 
-import ThemeToggler from "@/components//ThemeToggler";
 import Nav from "@/components//Nav";
 import MobileNav from "@/components/MobileNav";
 import Link from "next/link";
+import Socials from "@/components/Socials";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-[#f9f8f4] py-7 dark:bg-transparent">
-      <div className="container w-[70%]">
+    <header className="bg-[#FFF8EA] py-10 dark:bg-transparent">
+      <div className="container max-w-screen-xl">
         <div className="flex items-center justify-between">
           <Link href="/">
             <h1 className="text-xl font-semibold">Bartek Piekarz</h1>
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
             />
           </div>
           <div className="flex items-center gap-x-6">
-            <ThemeToggler />
+            <Socials containerStyles="flex gap-x-3" />
             <div className="xl:hidden">
               <MobileNav />
             </div>

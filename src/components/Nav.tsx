@@ -18,6 +18,7 @@ const links: NavLink[] = [
   { path: "/projects", name: "my projects" },
   { path: "/blog", name: "blog" },
   { path: "/about", name: "about" },
+  { path: "/vodkie", name: "vodkie" },
 ];
 
 interface NavProps {
