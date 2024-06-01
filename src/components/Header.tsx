@@ -12,8 +12,9 @@ const Header: React.FC = () => {
     <header className="bg-[#FFF8EA] py-10 dark:bg-transparent">
       <div className="container max-w-screen-xl">
         <div className="flex items-center justify-between">
-          <Link href="/">
+          <Link href="/" className="group relative">
             <h1 className="text-xl font-semibold">Bartek Piekarz</h1>
+            <span className="absolute bottom-0 left-0 h-0.5 w-full scale-x-0 transform bg-primary transition-all duration-500 group-hover:scale-x-100"></span>
           </Link>
           <div className="flex items-center">
             <Nav
