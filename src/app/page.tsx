@@ -2,13 +2,16 @@ import { CreatePost } from "@/components/create-post";
 import { getServerAuthSession } from "@/server/auth";
 import { api } from "@/trpc/server";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import Introduction from "@/components/Introduction";
+import VodkieApp from "@/components/VodkieApp";
+import Recommendations from "@/components/Recommendations";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
   const session = await getServerAuthSession();
 
   return (
-    <main className="min-h-screen]">
+    <main className="min-h-screen">
       <div className="flex w-full items-center justify-center bg-[#FFF8EA] py-20">
         <MaxWidthWrapper className="space-y-3 text-center">
           <h1 className="px-4 text-5xl font-bold">Blog of Teen Developer</h1>
@@ -17,6 +20,9 @@ export default async function Home() {
           </h2>
         </MaxWidthWrapper>
       </div>
+      <Recommendations />
+      <Introduction />
+      <VodkieApp />
     </main>
   );
 }

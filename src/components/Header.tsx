@@ -24,7 +24,9 @@ const Header: React.FC = () => {
             />
           </div>
           <div className="flex items-center gap-x-6">
-            <Socials containerStyles="flex gap-x-3" />
+            <div className="sm: hidden xl:block">
+              <Socials containerStyles="flex gap-x-3" />
+            </div>
             <div className="xl:hidden">
               <MobileNav />
             </div>

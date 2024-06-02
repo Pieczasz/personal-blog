@@ -20,15 +20,15 @@ interface SocialsLink {
 //TODO: add my personal socials
 const links: SocialsLink[] = [
   {
-    path: "https://twitter.com/yourprofile",
+    path: "https://x.com/Pieczasz",
     icon: <Twitter className="h-6 w-6" />,
   },
   {
-    path: "https://instagram.com/yourprofile",
+    path: "https://www.instagram.com/bartek__piekarz/",
     icon: <Instagram className="h-6 w-6" />,
   },
   {
-    path: "https://linkedin.com/in/yourprofile",
+    path: "https://www.linkedin.com/in/bart%C5%82omiej-piekarz-274b49304/",
     icon: <Linkedin className="h-6 w-6" />,
   },
 ];
