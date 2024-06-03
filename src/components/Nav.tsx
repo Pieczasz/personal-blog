@@ -15,10 +15,10 @@ interface NavLink {
 }
 
 const links: NavLink[] = [
-  { path: "/projects", name: "my projects" },
   { path: "/blog", name: "blog" },
-  { path: "/about", name: "about" },
+  { path: "/projects", name: "my projects" },
   { path: "/vodkie", name: "vodkie" },
+  { path: "/about", name: "about" },
 ];
 
 interface NavProps {

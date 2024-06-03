@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-const Recommendations = () => {
+const Newsletter = () => {
   return (
     <div className="m-auto flex w-full flex-col items-center px-10 py-[8rem]">
       <h2 className="text-center text-3xl font-bold">
@@ -21,13 +21,17 @@ const Recommendations = () => {
           Subscribe
         </Button>
       </div>
-      <p className="pt-10 text-xl">My newsletter includes my recommendations</p>
-      <p className="pt-1 text-xl">
-        about books, technologies, life, travelling,
-      </p>
-      <p className="pt-1 text-xl">and more...</p>
+      <div>
+        <p className="pt-10 text-left text-xl xl:text-center">
+          My newsletter includes my recommendations
+        </p>
+        <p className="pt-1 text-left text-xl xl:text-center">
+          about books, technologies, life, travelling,
+        </p>
+        <p className="pt-1 text-left text-xl xl:text-center">and more...</p>
+      </div>
     </div>
   );
 };
 
-export default Recommendations;
+export default Newsletter;

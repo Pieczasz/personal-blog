@@ -4,7 +4,7 @@ import { api } from "@/trpc/server";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Introduction from "@/components/Introduction";
 import VodkieApp from "@/components/VodkieApp";
-import Recommendations from "@/components/Recommendations";
+import Recommendations from "@/components/Newsletter";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
