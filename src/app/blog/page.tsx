@@ -23,7 +23,7 @@ function Home() {
             against conventional beliefs, we focus on three broad areas:
           </h3>
         </div>
-        <div className="m-auto flex max-w-screen-md flex-col gap-x-0 gap-y-2 px-10 text-center xl:flex-row">
+        <div className="m-auto flex max-w-screen-md flex-col gap-x-0 gap-y-2 px-10 text-center lg:flex-row">
           <Link href="/blog/life" className="flex w-1/2 flex-col">
             {/* Image */}
             <h3 className={`text-2xl font-bold ${LoraFont.className}`}>Life</h3>
@@ -38,7 +38,7 @@ function Home() {
             </p>
           </Link>
         </div>
-        <div className="m-auto flex max-w-screen-md flex-col gap-x-0 gap-y-2 px-10 text-center xl:flex-row">
+        <div className="m-auto flex max-w-screen-md flex-col gap-x-0 gap-y-2 px-10 text-center lg:flex-row">
           <Link href="/blog/coding" className="w-1/2">
             {/* Image */}
             <h3 className={`text-2xl font-bold ${LoraFont.className}`}>

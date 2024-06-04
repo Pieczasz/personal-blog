@@ -22,13 +22,13 @@ const Newsletter = () => {
         </Button>
       </div>
       <div>
-        <p className="pt-10 text-left text-xl xl:text-center">
+        <p className="pt-10 text-left text-xl lg:text-center">
           My newsletter includes my recommendations
         </p>
-        <p className="pt-1 text-left text-xl xl:text-center">
+        <p className="pt-1 text-left text-xl lg:text-center">
           about books, technologies, life, travelling,
         </p>
-        <p className="pt-1 text-left text-xl xl:text-center">and more...</p>
+        <p className="pt-1 text-left text-xl lg:text-center">and more...</p>
       </div>
     </div>
   );
