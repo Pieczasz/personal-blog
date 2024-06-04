@@ -40,7 +40,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       initial={{ x: "100%" }}
       animate={{ x: 0 }}
       exit={{ x: "100%" }}
-      transition={{ type: "tween", duration: 0.5 }}
+      transition={{ type: "tween", duration: 0.6 }}
       className="fixed inset-0 top-20 z-[1000] h-[calc(100%-5rem)] w-full bg-[#FFF8EA]"
     >
       <nav className={containerStyles}>
