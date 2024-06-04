@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import "@/styles/globals.css";
 
 // Font
@@ -16,7 +15,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 // I am disabling this here because I know that i export font properly and properly use it
-// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
+// @next/next/google-font-display
 const PTSans = PT_Sans({
   style: ["normal"],
   weight: ["400", "700"],
@@ -36,7 +35,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     <html lang="en" className={`${PTSans.className}`}>
       <body>
         <TRPCReactProvider>
