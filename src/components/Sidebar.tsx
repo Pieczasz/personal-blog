@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 
 // Components
 import Link from "next/link";
+import Socials from "./Socials";
 
 interface SidebarLink {
   path: string;
@@ -64,6 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           </Link>
         ))}
       </nav>
+      <Socials containerStyles="flex flex-row justify-center items-start gap-x-4" />
     </motion.div>
   );
 };
