@@ -8,6 +8,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  CarouselDots,
 } from "@/components/ui/carousel";
 
 import { MoveRight } from "lucide-react";
@@ -54,18 +55,22 @@ function Home() {
       <div className="flex-col gap-y-10 lg:flex">
         <div className="m-auto flex max-w-screen-md flex-col gap-y-10 px-10 py-16 text-center">
           {/* //TODO:  Create my own quotes*/}
-          <h3 className="text-2xl font-bold underline">JUST FU****G DO IT</h3>
-          <h1 className={`font-weight-[500] text-5xl ${LoraFont.className}`}>
+          <h3 className="px-4 text-2xl font-bold underline">
+            JUST FU****G DO IT
+          </h3>
+          <h1
+            className={`font-weight-[500] px-4 text-5xl ${LoraFont.className}`}
+          >
             &quot;You don’t have to live your life the way others expect.&quot;
           </h1>
-          <h3 className="text-2xl">
+          <h3 className="px-4 text-2xl">
             This statement is the cornerstone of The Art of Non-Conformity, the
             blog I&apos;ve been writing for more than a decade. In the battle
             against conventional beliefs, we focus on three broad areas:
           </h3>
         </div>
         <div className="flex flex-col gap-y-10">
-          <div className="m-auto flex-col gap-x-0 gap-y-2 px-10 pb-28 text-center lg:flex-row">
+          <div className="m-auto flex-col gap-x-0 gap-y-2 px-4 pb-28 text-center lg:flex-row">
             <Carousel className="w-full max-w-xs">
               <CarouselContent>
                 {blogLinks.map((blogLink, index) => (
@@ -88,8 +93,9 @@ function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="hidden lg:flex" />
+              <CarouselNext className="hidden lg:flex" />
+              <CarouselDots className="flex lg:hidden" />
             </Carousel>
           </div>
         </div>
