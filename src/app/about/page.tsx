@@ -16,6 +16,7 @@ function About() {
       <div className="m-auto flex max-w-screen-md flex-col items-center justify-center text-left">
         <AboutMeDescription />
       </div>
+      <hr className="border-primary/35" />
       <OtherInterests />
     </main>
   );
