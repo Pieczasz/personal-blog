@@ -5,7 +5,7 @@ import AboutHero from "@/components/AboutHero";
 import AboutMeDescription from "@/components/AboutMeDescription";
 import OtherInterests from "@/components/OtherInterests";
 
-export default async function Home() {
+function About() {
   return (
     <main className="min-h-screen">
       <div className="flex w-full items-center justify-center bg-[#FFF8EA] py-20">
@@ -13,8 +13,12 @@ export default async function Home() {
           <AboutHero />
         </MaxWidthWrapper>
       </div>
-      <AboutMeDescription />
+      <div className="m-auto flex max-w-screen-md flex-col items-center justify-center text-left">
+        <AboutMeDescription />
+      </div>
       <OtherInterests />
     </main>
   );
 }
+
+export default About;
