@@ -28,11 +28,12 @@ export const postRouter = createTRPCRouter({
       });
     }),
 
-  getLatest: publicProcedure.query(({ ctx }) => {
-    return ctx.db.query.posts.findFirst({
-      orderBy: (posts, { desc }) => [desc(posts.createdAt)],
-    });
-  }),
+    // TODO: change it for sqlite with turso
+  // getLatest: publicProcedure.query(({ ctx }) => {
+  //   return ctx.db.query.posts.findFirst({
+  //     orderBy: (posts, { desc }) => [desc(posts.createdAt)],
+  //   });
+  // }),
 
   getSecretMessage: protectedProcedure.query(() => {
     return "you can now see this secret message!";

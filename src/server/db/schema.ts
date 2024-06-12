@@ -32,7 +32,6 @@ export const users = sqliteTable("user", {
   name: text("name"),
   email: text("email").notNull(),
   emailVerified: text("emailVerified").default(sql`CURRENT_TIMESTAMP`),
-  image: text("image"),
 });
 
 export const usersRelations = relations(users, ({ many }) => ({
