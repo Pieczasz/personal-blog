@@ -69,6 +69,17 @@ export const verificationTokens = sqliteTable(
     compoundKey: primaryKey({ columns: [vt.identifier, vt.token] }),
   }),
 );
+export const posts = sqliteTable("posts", {
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
+  title: text("title").notNull(),
+  content: text("content").notNull(),
+  createdAt: text("createdAt").notNull(),
+  updatedAt: text("updatedAt").notNull(),
+  createdById: text("createdById").notNull(),
+  images: text("images"),
+});
 
 export type InsertAccounts = typeof accounts.$inferInsert;
 export type SelectAccounts = typeof accounts.$inferSelect;

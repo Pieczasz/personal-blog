@@ -1,5 +1,4 @@
 import { z } from "zod";
-
 import {
   createTRPCRouter,
   protectedProcedure,
@@ -17,23 +16,25 @@ export const postRouter = createTRPCRouter({
     }),
 
   create: protectedProcedure
-    .input(z.object({ name: z.string().min(1) }))
+    .input(
+      z.object({
+        title: z.string().min(1),
+        content: z.string().min(1),
+        images: z.array(z.string().url()).optional(),
+      }),
+    )
     .mutation(async ({ ctx, input }) => {
-      // simulate a slow db call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const now = Date.now().toString();
 
       await ctx.db.insert(posts).values({
-        name: input.name,
+        title: input.title,
+        content: input.content,
+        createdAt: now,
+        updatedAt: now,
+        images: input.images ? input.images.join(",") : null,
         createdById: ctx.session.user.id,
       });
     }),
-
-    // TODO: change it for sqlite with turso
-  // getLatest: publicProcedure.query(({ ctx }) => {
-  //   return ctx.db.query.posts.findFirst({
-  //     orderBy: (posts, { desc }) => [desc(posts.createdAt)],
-  //   });
-  // }),
 
   getSecretMessage: protectedProcedure.query(() => {
     return "you can now see this secret message!";
