@@ -21,6 +21,7 @@ export const postRouter = createTRPCRouter({
         title: z.string().min(1),
         content: z.string().min(1),
         images: z.array(z.string().url()).optional(),
+        type: z.enum(["life", "productivity", "coding", "trading"]),
       }),
     )
     .mutation(async ({ ctx, input }) => {
@@ -33,6 +34,7 @@ export const postRouter = createTRPCRouter({
         updatedAt: now,
         images: input.images ? input.images.join(",") : null,
         createdById: ctx.session.user.id,
+        type: input.type,
       });
     }),
 

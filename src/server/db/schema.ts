@@ -79,6 +79,7 @@ export const posts = sqliteTable("posts", {
   updatedAt: text("updatedAt").notNull(),
   createdById: text("createdById").notNull(),
   images: text("images"),
+  type: text("type").notNull(),
 });
 
 export type InsertAccounts = typeof accounts.$inferInsert;
