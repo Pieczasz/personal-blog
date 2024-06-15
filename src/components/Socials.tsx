@@ -10,7 +10,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 // Icons
-import { Instagram, Twitter, Linkedin } from "lucide-react";
+import { FaInstagram, FaGoodreadsG } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiLinkedin } from "react-icons/fi";
 
 interface SocialsLink {
   path: string;
@@ -21,15 +23,19 @@ interface SocialsLink {
 const links: SocialsLink[] = [
   {
     path: "https://x.com/Pieczasz",
-    icon: <Twitter className="h-6 w-6" />,
+    icon: <FaXTwitter className="h-6 w-6" />,
   },
   {
     path: "https://www.instagram.com/bartek__piekarz/",
-    icon: <Instagram className="h-6 w-6" />,
+    icon: <FaInstagram className="h-6 w-6" />,
   },
   {
     path: "https://www.linkedin.com/in/bart%C5%82omiej-piekarz-274b49304/",
-    icon: <Linkedin className="h-6 w-6" />,
+    icon: <FiLinkedin className="h-6 w-6" />,
+  },
+  {
+    path: "https://www.goodreads.com/user/show/165146275-bart-omiej-piekarz",
+    icon: <FaGoodreadsG className="h-6 w-6" />,
   },
 ];
 
