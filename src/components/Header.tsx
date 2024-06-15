@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           <Link href="/" className="group relative">
             <h1 className="text-xl font-semibold">Bartek Piekarz</h1>
-            <span className="absolute bottom-0 left-0 h-0.5 w-full scale-x-0 transform bg-primary transition-all duration-500 group-hover:scale-x-100"></span>
+            <span className="absolute bottom-0 left-0 h-0.5 w-full scale-x-0 transform bg-primary transition-all duration-500 group-hover:scale-x-100" />
           </Link>
           <div className="flex items-center">
             <Nav

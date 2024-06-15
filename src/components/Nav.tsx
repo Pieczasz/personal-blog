@@ -16,6 +16,7 @@ interface NavLink {
 
 const links: NavLink[] = [
   { path: "/blog", name: "blog" },
+  // TODO: create a route for my portfolio website projects
   { path: "/projects", name: "my projects" },
   { path: "/vodkie", name: "vodkie" },
   { path: "/about", name: "about" },
