@@ -62,10 +62,13 @@ export default function Home() {
             </motion.div>
           </div>
           <div className="w-full px-10">
-            Knowing what you want in{" "}
-            <span className="rounded-xl bg-sky-100 p-1 font-bold">life</span> is
-            actually really hard. Modern society expect you to know what you
-            want but in reality only a few people know.
+            <p>
+              Trade with the{" "}
+              <span className="rounded-xl bg-sky-100 p-1 font-bold">trend</span>
+              , &apos;cause the{" "}
+              <span className="rounded-xl bg-sky-100 p-1 font-bold">trend</span>{" "}
+              is your friend.
+            </p>
           </div>
         </div>
         <hr className="w-full border-primary/35" />

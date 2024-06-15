@@ -33,7 +33,7 @@ interface BlogLink {
 const blogLinks: BlogLink[] = [
   {
     title: "Life",
-    description: "My life",
+    description: "My journey, family, and mostly books that I read.",
     path: "/blog/life",
   },
   {
