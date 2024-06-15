@@ -14,7 +14,7 @@ export function CreatePost() {
   const [images, setImages] = useState<string[]>([]);
   const [type, setType] = useState<
     "life" | "productivity" | "coding" | "trading"
-  >("life"); // Default value with correct type
+  >("life");
 
   const createPost = api.post.create.useMutation({
     onSuccess: () => {
@@ -22,7 +22,7 @@ export function CreatePost() {
       setTitle("");
       setContent("");
       setImages([]);
-      setType("life"); // Reset to default value
+      setType("life");
     },
   });
 
