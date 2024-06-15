@@ -1,6 +1,10 @@
+"use client";
+
 import { Lora } from "@next/font/google";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+
+import { motion } from "framer-motion";
 
 import {
   Carousel,
@@ -85,7 +89,13 @@ function Home() {
                           </h2>
                           <p>{blogLink.description}</p>
                           <p className="flex flex-row items-center justify-center gap-x-3 text-sm font-bold">
-                            Read more <MoveRight />
+                            <motion.span
+                              whileHover={{ scale: 1.1 }}
+                              whileTap={{ scale: 0.95 }}
+                              className="flex w-full gap-x-2"
+                            >
+                              Read more <MoveRight />
+                            </motion.span>
                           </p>
                         </CardContent>
                       </Card>

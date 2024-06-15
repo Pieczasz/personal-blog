@@ -11,8 +11,8 @@ const AboutHero = () => {
           <div className="flex flex-col gap-y-6">
             {/* //TODO: make it the acual post from blog and read more... */}
             <p className="text-left text-xl">
-              I&apos;m a full-stack developer from Poland. My history begin in
-              may 2024. At that time I started learning react by creating
+              I&apos;m a full-stack developer from Poland. My history have begun
+              in may 2024. At that time I started learning react by creating
               website for my church parish (Yes I am catholic). After that I
               started creating Vodkie using React Native expo. Besides that at
               the same time I was creating blog that you are now able to read.
