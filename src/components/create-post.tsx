@@ -1,13 +1,17 @@
 "use client";
 
+// Components
+
+import JoditEditor from "jodit-react";
+
 // Functions
-import { useState } from "react";
+import React, { useState, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
 
 // TRPC
 import { api } from "@/trpc/react";
 
-export function CreatePost() {
+export function CreatePostForm() {
   const router = useRouter();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -15,6 +19,8 @@ export function CreatePost() {
   const [type, setType] = useState<
     "life" | "productivity" | "coding" | "trading"
   >("life");
+
+  const editor = useRef(null);
 
   const createPost = api.post.create.useMutation({
     onSuccess: () => {
@@ -37,52 +43,18 @@ export function CreatePost() {
         e.preventDefault();
         createPost.mutate({ title, content, images, type });
       }}
-      className="flex flex-col gap-2"
+      className="my-5 flex w-full flex-col  items-center gap-2"
     >
-      <input
-        type="text"
-        placeholder="Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        className="w-full rounded-full px-4 py-2 text-black"
-        required
-      />
-      <textarea
-        placeholder="Content"
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-        className="w-full rounded-full px-4 py-2 text-black"
-        required
-      />
-      <input
-        type="text"
-        placeholder="Image URLs (comma-separated)"
-        value={images.join(", ")}
-        onChange={handleImageChange}
-        className="w-full rounded-full px-4 py-2 text-black"
-      />
-      <select
-        value={type}
-        onChange={(e) =>
-          setType(
-            e.target.value as "life" | "productivity" | "coding" | "trading",
-          )
-        }
-        className="w-full rounded-full px-4 py-2 text-black"
-        required
-      >
-        <option value="life">Life</option>
-        <option value="productivity">Productivity</option>
-        <option value="coding">Coding</option>
-        <option value="trading">Trading</option>
-      </select>
-      <button
-        type="submit"
-        className="rounded-full bg-white/10 px-10 py-3 font-semibold transition hover:bg-white/20"
-        disabled={createPost.isPending}
-      >
-        {createPost.isPending ? "Submitting..." : "Submit"}
-      </button>
+      <div className="w-3/5">
+        <h1 className="mb-5 text-center font-bold">Create a post</h1>
+        <JoditEditor
+          className="w-full"
+          ref={editor}
+          value={content}
+          onBlur={(newContent) => setContent(newContent)}
+          onChange={(newContent) => {}}
+        />
+      </div>
     </form>
   );
 }
