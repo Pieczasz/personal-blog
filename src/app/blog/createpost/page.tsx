@@ -1,17 +1,21 @@
 "use client";
-
 // Functions
-import { motion } from "framer-motion";
-import Link from "next/link"; // Import Link from Next.js
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 // Components
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { CreatePostForm } from "@/components/create-post";
 
-// Icons
-import { FaSearch } from "react-icons/fa";
-
 function CreatePost() {
+  const session = useSession();
+  const router = useRouter();
+
+  if (!session.data) {
+    router.push("/api/auth/signin");
+  }
+  if (session.data?.user?.email !== "bartekp854@gmail.com") return false;
+
   return (
     <main className="flex min-h-screen flex-col">
       <MaxWidthWrapper>

@@ -13,6 +13,7 @@ import { TRPCReactProvider } from "@/trpc/react";
 // Components
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Provider from "@/components/Provider";
 
 // I am disabling this here because I know that i export font properly and properly use it
 // @next/next/google-font-display
@@ -33,18 +34,20 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${PTSans.className}`}>
       <body>
-        <TRPCReactProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Header />
-            {children}
-            <Footer />
-          </ThemeProvider>
-        </TRPCReactProvider>
+        <Provider>
+          <TRPCReactProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Header />
+              {children}
+              <Footer />
+            </ThemeProvider>
+          </TRPCReactProvider>
+        </Provider>
       </body>
     </html>
   );
