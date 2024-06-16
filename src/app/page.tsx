@@ -1,14 +1,15 @@
-import { CreatePost } from "@/components/create-post";
-import { getServerAuthSession } from "@/server/auth";
-import { api } from "@/trpc/server";
+// import { CreatePost } from "@/components/create-post";
+// import { getServerAuthSession } from "@/server/auth";
+// import { api } from "@/trpc/server";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Introduction from "@/components/Introduction";
 import VodkieApp from "@/components/VodkieApp";
 import Recommendations from "@/components/Newsletter";
 
 export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
-  const session = await getServerAuthSession();
+  // Exmaple of hello and getting user session with TRPC
+  // const hello = await api.post.hello({ text: "from tRPC" });
+  // const session = await getServerAuthSession();
 
   return (
     <main className="min-h-screen">
@@ -23,25 +24,26 @@ export default async function Home() {
       <Recommendations />
       <Introduction />
       <VodkieApp />
-      <CrudShowcase />
     </main>
   );
 }
 
-async function CrudShowcase() {
-  const session = await getServerAuthSession();
-  if (!session?.user)
-    return (
-      <div className="w-full max-w-xs">
-        <p>a</p>
-      </div>
-    );
+// Example of CRUD with tRPC
 
-  return (
-    <div className="w-full max-w-xs">
-      <p>a</p>
-      <p>Your email: {session.user.email}</p>
-      <CreatePost />
-    </div>
-  );
-}
+// async function CrudShowcase() {
+//   const session = await getServerAuthSession();
+//   if (!session?.user)
+//     return (
+//       <div className="w-full max-w-xs">
+//         <p>a</p>
+//       </div>
+//     );
+
+//   return (
+//     <div className="w-full max-w-xs">
+//       <p>a</p>
+//       <p>Your email: {session.user.email}</p>
+//       <CreatePost />
+//     </div>
+//   );
+// }
