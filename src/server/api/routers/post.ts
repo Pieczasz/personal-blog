@@ -18,9 +18,7 @@ export const postRouter = createTRPCRouter({
   create: protectedProcedure
     .input(
       z.object({
-        title: z.string().min(1),
-        content: z.string().min(1),
-        images: z.array(z.string().url()).optional(),
+        content: z.string().min(6),
         type: z.enum(["life", "productivity", "coding", "trading"]),
       }),
     )
@@ -28,11 +26,9 @@ export const postRouter = createTRPCRouter({
       const now = Date.now().toString();
 
       await ctx.db.insert(posts).values({
-        title: input.title,
         content: input.content,
         createdAt: now,
         updatedAt: now,
-        images: input.images ? input.images.join(",") : null,
         createdById: ctx.session.user.id,
         type: input.type,
       });

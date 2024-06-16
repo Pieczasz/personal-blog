@@ -8,6 +8,13 @@
       "when": 1718547534042,
       "tag": "0000_previous_shooting_star",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1718564977423,
+      "tag": "0001_perfect_thunderbolt",
+      "breakpoints": true
     }
   ]
 }
