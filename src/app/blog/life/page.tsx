@@ -12,8 +12,8 @@ import { FaSearch } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
-      <MaxWidthWrapper>
+    <main className="flex min-h-screen flex-col items-end">
+      <div className="h-full min-h-screen border-l border-primary/35 lg:w-[35%]">
         <hr className="w-full border-primary/35" />
         <div className="my-3 flex w-full max-w-md items-center justify-center gap-x-2 px-10">
           <input
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <hr className="w-full border-primary/35" />
         <div className="my-5 flex w-full flex-col">
-          <div className="mb-4 flex w-full max-w-md items-center justify-center gap-x-2 px-10">
+          <div className="mb-4 flex w-full max-w-md items-center justify-center gap-x-4 px-10">
             <motion.div
               className="min-w-16 rounded-2xl bg-[#DAF7A6] text-center font-bold"
               whileTap={{ scale: 0.95 }}
@@ -71,7 +71,8 @@ export default function Home() {
           </div>
         </div>
         <hr className="w-full border-primary/35" />
-      </MaxWidthWrapper>
+        <div className="flex w-full flex-col">{/* Posts */}</div>
+      </div>
     </main>
   );
 }

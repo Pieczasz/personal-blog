@@ -23,25 +23,25 @@ export default async function Home() {
       <Recommendations />
       <Introduction />
       <VodkieApp />
+      <CrudShowcase />
     </main>
   );
 }
 
-// async function CrudShowcase() {
-//   const session = await getServerAuthSession();
-//   if (!session?.user) return null;
+async function CrudShowcase() {
+  const session = await getServerAuthSession();
+  if (!session?.user)
+    return (
+      <div className="w-full max-w-xs">
+        <p>a</p>
+      </div>
+    );
 
-//   const latestPost = await api.post.getLatest();
-
-//   return (
-//     <div className="w-full max-w-xs">
-//       {latestPost ? (
-//         <p className="truncate">Your most recent post: {latestPost.name}</p>
-//       ) : (
-//         <p>You have no posts yet.</p>
-//       )}
-
-//       <CreatePost />
-//     </div>
-//   );
-// }
+  return (
+    <div className="w-full max-w-xs">
+      <p>a</p>
+      <p>Your email: {session.user.email}</p>
+      <CreatePost />
+    </div>
+  );
+}

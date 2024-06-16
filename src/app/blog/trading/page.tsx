@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <hr className="w-full border-primary/35" />
         <div className="my-5 flex w-full flex-col">
-          <div className="mb-4 flex w-full max-w-md items-center justify-center gap-x-2 px-10">
+          <div className="mb-4 flex w-full max-w-md items-center justify-center gap-x-4 px-10">
             <motion.div
               className="min-w-16 rounded-2xl bg-[#DAF7A6] text-center font-bold"
               whileTap={{ scale: 0.95 }}
