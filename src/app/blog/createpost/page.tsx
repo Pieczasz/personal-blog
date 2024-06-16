@@ -10,7 +10,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 // Icons
 import { FaSearch } from "react-icons/fa";
 
-function Coding() {
+function CreatePost() {
   return (
     <main className="flex min-h-screen flex-col">
       <MaxWidthWrapper>
@@ -76,4 +76,4 @@ function Coding() {
   );
 }
 
-export default Coding;
+export default CreatePost;

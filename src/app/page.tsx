@@ -6,7 +6,7 @@ import Introduction from "@/components/Introduction";
 import VodkieApp from "@/components/VodkieApp";
 import Recommendations from "@/components/Newsletter";
 
-export default async function Home() {
+function Home() {
   // Exmaple of hello and getting user session with TRPC
   // const hello = await api.post.hello({ text: "from tRPC" });
   // const session = await getServerAuthSession();
@@ -28,6 +28,7 @@ export default async function Home() {
   );
 }
 
+export default Home;
 // Example of CRUD with tRPC
 
 // async function CrudShowcase() {

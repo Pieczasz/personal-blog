@@ -1,6 +1,6 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
-export default async function Home() {
+function Vodkie() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center text-white">
       <MaxWidthWrapper>
@@ -9,3 +9,5 @@ export default async function Home() {
     </main>
   );
 }
+
+export default Vodkie;

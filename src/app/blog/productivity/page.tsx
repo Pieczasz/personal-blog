@@ -10,7 +10,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 // Icons
 import { FaSearch } from "react-icons/fa";
 
-export default function Home() {
+function Productivity() {
   return (
     <main className="flex min-h-screen flex-col">
       <MaxWidthWrapper>
@@ -75,3 +75,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Productivity;

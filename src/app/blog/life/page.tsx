@@ -10,7 +10,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 // Icons
 import { FaSearch } from "react-icons/fa";
 
-export default function Home() {
+function Life() {
   return (
     <main className="flex min-h-screen flex-col items-end">
       <div className="h-full min-h-screen border-l border-primary/35 lg:w-[35%]">
@@ -76,3 +76,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Life;
