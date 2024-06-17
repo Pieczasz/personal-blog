@@ -76,8 +76,29 @@ function Life() {
             </p>
           </div>
         </div>
-        <hr className="w-full border-primary/35" />
-        <div className="flex w-full flex-col">{/* Posts */}</div>
+        <div className="flex w-full flex-col">
+          {isLoading ? (
+            <div></div>
+          ) : error ? (
+            <p>Error loading posts</p>
+          ) : (
+            posts!.map((post) => (
+              <Link
+                href={`/blog/life/${post.id}`}
+                key={post.id}
+                className="border-y border-y-primary/35"
+              >
+                <motion.div
+                  key={post.id}
+                  className="h-full w-full p-4 duration-200 hover:bg-slate-100"
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <p>{post.title}</p>
+                </motion.div>
+              </Link>
+            ))
+          )}
+        </div>
       </div>
     </main>
   );
