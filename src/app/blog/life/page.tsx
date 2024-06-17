@@ -13,9 +13,9 @@ import { FaSearch } from "react-icons/fa";
 function Life() {
   return (
     <main className="flex min-h-screen flex-col items-end">
-      <div className="h-full min-h-screen border-l border-primary/35 lg:w-[35%]">
+      <div className="h-full min-h-screen border-l border-primary/35 lg:w-[39%] xl:w-[30%]">
         <hr className="w-full border-primary/35" />
-        <div className="my-3 flex w-full max-w-md items-center justify-center gap-x-2 px-10">
+        <div className="my-3 flex w-full max-w-md items-center justify-center gap-x-2 px-2">
           <input
             type="text"
             name="search"
@@ -27,7 +27,7 @@ function Life() {
         </div>
         <hr className="w-full border-primary/35" />
         <div className="my-5 flex w-full flex-col">
-          <div className="mb-4 flex w-full max-w-md items-center justify-center gap-x-4 px-10">
+          <div className="mb-4 flex w-full max-w-md items-center justify-center gap-x-4 px-2">
             <motion.div
               className="min-w-16 rounded-2xl bg-[#DAF7A6] text-center font-bold"
               whileTap={{ scale: 0.95 }}
@@ -61,7 +61,7 @@ function Life() {
               </Link>
             </motion.div>
           </div>
-          <div className="w-full px-10">
+          <div className="w-full px-6">
             <p>
               Knowing what you want in{" "}
               <span className="rounded-xl bg-sky-100 p-1 font-bold">life</span>{" "}
