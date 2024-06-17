@@ -11,8 +11,8 @@ function CreatePost() {
   const session = useSession();
   const router = useRouter();
 
-  if (!session.data) {
-    router.push("/api/auth/signin");
+  if (session.status === "unauthenticated") {
+    router.replace("/api/auth/signin");
   }
   if (session.data?.user?.email !== "bartekp854@gmail.com") return false;
 
