@@ -30,10 +30,12 @@ import { useRouter } from "next/navigation";
 
 // TRPC
 import { api } from "@/trpc/react";
+import { Input } from "./ui/input";
 
 const postFormSchema = z.object({
+  title: z.string().min(3, { message: "Title must be at least 3 characters." }),
   content: z.string().min(20, {
-    message: "Conente must be at least 20 characters.",
+    message: "Conent must be at least 20 characters.",
   }),
   type: z.enum(["life", "productivity", "coding", "trading"]),
   createdAt: z.string(),
@@ -51,6 +53,7 @@ export function CreatePostForm() {
     defaultValues: {
       content: "",
       type: "life",
+      title: "",
       createdAt: today.toLocaleDateString(),
       updatedAt: today.toLocaleDateString(),
     },
@@ -70,9 +73,24 @@ export function CreatePostForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="my-10 flex w-full flex-col items-center justify-center gap-y-5 px-10"
+        className="my-10 flex w-full flex-col items-start justify-center gap-y-5 px-10"
       >
         <h1 className="mb-5 text-center font-bold">Create a post</h1>
+        <FormField
+          control={form.control}
+          name="title"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>
+                Title (will be shown while searching through blog posts)
+              </FormLabel>
+              <FormControl>
+                <Input {...field} placeholder="Title" className="w-full" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
         <FormField
           control={form.control}
           name="content"
@@ -85,7 +103,7 @@ export function CreatePostForm() {
             </FormItem>
           )}
         />
-        <div className="flex w-full items-end justify-center gap-x-8">
+        <div className="flex w-full items-end justify-start gap-x-8">
           <FormField
             control={form.control}
             name="type"

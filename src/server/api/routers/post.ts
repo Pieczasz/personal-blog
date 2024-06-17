@@ -5,6 +5,7 @@ import {
   publicProcedure,
 } from "@/server/api/trpc";
 import { posts } from "@/server/db/schema";
+import { desc, eq } from "drizzle-orm";
 
 export const postRouter = createTRPCRouter({
   hello: publicProcedure
@@ -18,8 +19,9 @@ export const postRouter = createTRPCRouter({
   create: protectedProcedure
     .input(
       z.object({
-        content: z.string().min(6),
+        content: z.string().min(20),
         type: z.enum(["life", "productivity", "coding", "trading"]),
+        title: z.string().min(3),
         createdAt: z.string(),
         updatedAt: z.string(),
       }),
@@ -29,6 +31,7 @@ export const postRouter = createTRPCRouter({
       const today = new Date(timeElapsed);
 
       await ctx.db.insert(posts).values({
+        title: input.title,
         content: input.content,
         createdAt: today.toUTCString(),
         updatedAt: today.toUTCString(),
@@ -38,5 +41,15 @@ export const postRouter = createTRPCRouter({
 
   getSecretMessage: protectedProcedure.query(() => {
     return "you can now see this secret message!";
+  }),
+
+  getLifePosts: publicProcedure.query(async ({ ctx }) => {
+    const lifePosts = await ctx.db
+      .select()
+      .from(posts)
+      .where(eq(posts.type, "life"))
+      .orderBy(desc(posts.updatedAt));
+
+    return lifePosts;
   }),
 });

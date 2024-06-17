@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 // Functions
@@ -9,8 +12,11 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 // Icons
 import { FaSearch } from "react-icons/fa";
+import { api } from "@/trpc/react";
 
 function Life() {
+  const { data: posts, isLoading, error } = api.post.getLifePosts.useQuery();
+
   return (
     <main className="flex min-h-screen flex-col items-end">
       <div className="h-full min-h-screen border-l border-primary/35 lg:w-[39%] xl:w-[30%]">
