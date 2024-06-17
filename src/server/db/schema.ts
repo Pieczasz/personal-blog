@@ -76,7 +76,6 @@ export const posts = sqliteTable("posts", {
   content: text("content").notNull(),
   createdAt: text("createdAt").notNull(),
   updatedAt: text("updatedAt").notNull(),
-  createdById: text("createdById").notNull(),
   type: text("type").notNull(),
 });
 

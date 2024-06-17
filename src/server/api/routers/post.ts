@@ -23,13 +23,13 @@ export const postRouter = createTRPCRouter({
       }),
     )
     .mutation(async ({ ctx, input }) => {
-      const now = Date.now().toString();
+      const timeElapsed = Date.now();
+      const today = new Date(timeElapsed);
 
       await ctx.db.insert(posts).values({
         content: input.content,
-        createdAt: now,
-        updatedAt: now,
-        createdById: ctx.session.user.id,
+        createdAt: today.toUTCString(),
+        updatedAt: today.toUTCString(),
         type: input.type,
       });
     }),
