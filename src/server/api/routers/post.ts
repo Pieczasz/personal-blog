@@ -20,6 +20,8 @@ export const postRouter = createTRPCRouter({
       z.object({
         content: z.string().min(6),
         type: z.enum(["life", "productivity", "coding", "trading"]),
+        createdAt: z.string(),
+        updatedAt: z.string(),
       }),
     )
     .mutation(async ({ ctx, input }) => {

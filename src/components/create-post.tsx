@@ -25,8 +25,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-// Functions
-import React, { useState, useRef } from "react";
+// Navigation
 import { useRouter } from "next/navigation";
 
 // TRPC
@@ -71,7 +70,7 @@ export function CreatePostForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="my-10 flex w-full flex-col items-center justify-center gap-y-5"
+        className="my-10 flex w-full flex-col items-center justify-center gap-y-5 px-10"
       >
         <h1 className="mb-5 text-center font-bold">Create a post</h1>
         <FormField
@@ -86,7 +85,7 @@ export function CreatePostForm() {
             </FormItem>
           )}
         />
-        <div className="flex w-full items-end justify-center gap-x-5">
+        <div className="flex w-full items-end justify-center gap-x-8">
           <FormField
             control={form.control}
             name="type"
