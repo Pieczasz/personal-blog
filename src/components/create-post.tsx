@@ -34,6 +34,7 @@ import { Input } from "./ui/input";
 
 const postFormSchema = z.object({
   title: z.string().min(3, { message: "Title must be at least 3 characters." }),
+  slug: z.string().min(3, { message: "Slug must be at least 3 characters." }),
   content: z.string().min(20, {
     message: "Conent must be at least 20 characters.",
   }),
@@ -54,6 +55,7 @@ export function CreatePostForm() {
       content: "",
       type: "life",
       title: "",
+      slug: "",
       createdAt: today.toLocaleDateString(),
       updatedAt: today.toLocaleDateString(),
     },
@@ -86,6 +88,19 @@ export function CreatePostForm() {
               </FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Title" className="w-full" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="slug"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Slug (will be shown as link)</FormLabel>
+              <FormControl>
+                <Input {...field} placeholder="Slug" className="w-full" />
               </FormControl>
               <FormMessage />
             </FormItem>

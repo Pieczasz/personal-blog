@@ -14,11 +14,12 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { FaSearch } from "react-icons/fa";
 import { api } from "@/trpc/react";
 
-function Life() {
+function Life({ children }: { children: React.ReactNode }) {
   const { data: posts, isLoading, error } = api.post.getLifePosts.useQuery();
 
   return (
-    <main className="flex min-h-screen flex-col items-end">
+    <main className="flex min-h-screen flex-col items-end lg:flex-row">
+      <div className="flex w-full">{children}</div>
       <div className="h-full min-h-screen border-l border-primary/35 lg:w-[39%] xl:w-[30%]">
         <hr className="w-full border-primary/35" />
         <div className="my-3 flex w-full max-w-md items-center justify-center gap-x-2 px-2">

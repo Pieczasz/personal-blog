@@ -22,6 +22,7 @@ export const postRouter = createTRPCRouter({
         content: z.string().min(20),
         type: z.enum(["life", "productivity", "coding", "trading"]),
         title: z.string().min(3),
+        slug: z.string().min(3),
         createdAt: z.string(),
         updatedAt: z.string(),
       }),
@@ -32,6 +33,7 @@ export const postRouter = createTRPCRouter({
 
       await ctx.db.insert(posts).values({
         title: input.title,
+        slug: input.slug,
         content: input.content,
         createdAt: today.toUTCString(),
         updatedAt: today.toUTCString(),
@@ -52,4 +54,15 @@ export const postRouter = createTRPCRouter({
 
     return lifePosts;
   }),
+  getPostBySlug: publicProcedure
+    .input(z.object({ slug: z.string() }))
+    .query(async ({ ctx, input }) => {
+      const post = await ctx.db
+        .select()
+        .from(posts)
+        .where(eq(posts.slug, input.slug))
+        .limit(1);
+
+      return post;
+    }),
 });

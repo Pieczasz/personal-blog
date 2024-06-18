@@ -17,11 +17,10 @@ CREATE TABLE `account` (
 CREATE TABLE `posts` (
 	`id` text PRIMARY KEY NOT NULL,
 	`title` text NOT NULL,
+	`slug` text NOT NULL,
 	`content` text NOT NULL,
 	`createdAt` text NOT NULL,
 	`updatedAt` text NOT NULL,
-	`createdById` text NOT NULL,
-	`images` text,
 	`type` text NOT NULL
 );
 --> statement-breakpoint
