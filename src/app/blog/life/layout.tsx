@@ -68,7 +68,7 @@ function Life({ children }: { children: React.ReactNode }) {
               </Link>
             </motion.div>
           </div>
-          <div className="w-full px-6">
+          <div className="w-full px-3">
             <p>
               Knowing what you want in{" "}
               <span className="rounded-xl bg-sky-100 p-1 font-bold">life</span>{" "}
