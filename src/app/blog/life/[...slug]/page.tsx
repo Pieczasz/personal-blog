@@ -27,11 +27,8 @@ type AnimationSequence = Parameters<typeof animate>[0];
 
 export default function PostPage({ params }: PostPageProps) {
   const slug = params?.slug?.join("");
-  console.log(`Slug: ${slug}`);
 
   const { data, isLoading, error } = api.post.getPostBySlug.useQuery({ slug });
-
-  console.log("Post Data:", data);
 
   // If the data is an array, access the first element
   const post = Array.isArray(data) ? data[0] : data;
@@ -45,17 +42,21 @@ export default function PostPage({ params }: PostPageProps) {
   const [scope, animate] = useAnimate();
 
   const onButtonClick = () => {
+    const currentUrl = window.location.href;
+
+    void navigator.clipboard.writeText(currentUrl);
+
     const sparkles = Array.from({ length: 5 });
     const sparklesAnimation: AnimationSequence = sparkles.map((_, index) => [
       `.sparkle-${index}`,
       {
-        x: randomNumberBetween(-100, 100),
-        y: randomNumberBetween(-100, 100),
-        scale: randomNumberBetween(1.5, 2.5),
+        x: randomNumberBetween(-80, 80),
+        y: randomNumberBetween(-80, 80),
+        scale: randomNumberBetween(1.2, 2.2),
         opacity: 1,
       },
       {
-        duration: 0.7,
+        duration: 0.6,
         at: "<",
       },
     ]);
@@ -67,7 +68,7 @@ export default function PostPage({ params }: PostPageProps) {
         scale: 0,
       },
       {
-        duration: 0.7,
+        duration: 0.6,
         at: "<",
       },
     ]);
@@ -85,9 +86,9 @@ export default function PostPage({ params }: PostPageProps) {
 
     void animate([
       ...sparklesReset,
-      [".letter", { y: -32 }, { duration: 0.4, delay: stagger(0.1) }],
+      [".letter", { y: -32 }, { duration: 0.3, delay: stagger(0.065) }],
       ["button", { scale: 0.8 }, { duration: 0.2, at: "<" }],
-      ["button", { scale: 1 }, { duration: 0.2 }],
+      ["button", { scale: 1 }, { duration: 0.6 }],
       ...sparklesAnimation,
       [".letter", { y: 0 }, { duration: 0.000001 }],
       ...sparklesFadeOut,
@@ -104,31 +105,40 @@ export default function PostPage({ params }: PostPageProps) {
         post && (
           <div
             key={post.id}
-            className="h-full w-full flex-col p-4 duration-200 hover:bg-slate-100 lg:flex-row"
+            className="h-full w-full flex-col p-4 duration-200 lg:flex-row"
           >
             <div className="my-5 w-full lg:w-1/5 lg:flex-col">
               <h5 className="font-bold">Share post:</h5>
               <div ref={scope} className="">
                 <button
                   onClick={onButtonClick}
-                  className="relative rounded-full border-2 border-blue-600 px-6 py-2 text-sm text-blue-600 transition-colors hover:bg-blue-100 "
+                  className="relative rounded-full border-2 border-black px-6 py-2 text-sm text-black transition-colors hover:bg-slate-100 "
                 >
                   <span className="sr-only flex gap-x-2">
+                    a
                     <FaLink />
-                    Share link
+                    Share Link
                   </span>
                   <span className="block h-8 overflow-hidden" aria-hidden>
-                    {["S", "h", "a", "r", "e", " ", "l", "i", "n", "k"].map(
-                      (letter, index) => (
-                        <span
-                          data-letter={letter}
-                          className="letter relative inline-block h-8 leading-8 after:absolute after:left-0 after:top-full after:h-8 after:content-[attr(data-letter)]"
-                          key={`${letter}-${index}`}
-                        >
-                          {letter}
-                        </span>
-                      ),
-                    )}
+                    {[
+                      "C",
+                      "o",
+                      "p",
+                      "y",
+                      "\u00A0", // non-breaking space character
+                      "l",
+                      "i",
+                      "n",
+                      "k",
+                    ].map((letter, index) => (
+                      <span
+                        data-letter={typeof letter === "string" ? letter : ""}
+                        className="letter relative inline-block h-8 leading-8 after:absolute after:left-0 after:top-full after:h-8 after:content-[attr(data-letter)]"
+                        key={index}
+                      >
+                        {letter}
+                      </span>
+                    ))}
                   </span>
                   <span
                     aria-hidden
@@ -143,7 +153,8 @@ export default function PostPage({ params }: PostPageProps) {
                         height="10"
                       >
                         <path
-                          className="fill-blue-600"
+                          className="fill-transparent stroke-black"
+                          strokeWidth="4"
                           d="M64.39,2,80.11,38.76,120,42.33a3.2,3.2,0,0,1,1.83,5.59h0L91.64,74.25l8.92,39a3.2,3.2,0,0,1-4.87,3.4L61.44,96.19,27.09,116.73a3.2,3.2,0,0,1-4.76-3.46h0l8.92-39L1.09,47.92A3.2,3.2,0,0,1,3,42.32l39.74-3.56L58.49,2a3.2,3.2,0,0,1,5.9,0Z"
                         />
                       </svg>
@@ -152,12 +163,12 @@ export default function PostPage({ params }: PostPageProps) {
                 </button>
               </div>
             </div>
-            <div
-              className="
-            mx-auto my-5 flex w-full flex-col px-10 lg:w-4/5"
-            >
+            <div className="mx-auto my-5 flex w-full flex-col px-10 lg:w-4/5">
               <h1>{post.title}</h1>
               <p>{HTMLReactParser(post.content)}</p>
+              <p>
+                <FaLink />
+              </p>
             </div>
           </div>
         )
