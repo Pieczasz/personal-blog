@@ -74,4 +74,10 @@
   p {
     @apply text-base;
   }
+  ol {
+    @apply list-decimal pl-2;
+  }
+  ul {
+    @apply list-disc pl-2;
+  }
 }

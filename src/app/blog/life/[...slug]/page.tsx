@@ -7,9 +7,6 @@ import { notFound } from "next/navigation";
 // Framer motion
 import { stagger, useAnimate, animate } from "framer-motion";
 
-// Icons
-import { FaLink } from "react-icons/fa";
-
 // tRPC
 import { api } from "@/trpc/react";
 
@@ -105,20 +102,16 @@ export default function PostPage({ params }: PostPageProps) {
         post && (
           <div
             key={post.id}
-            className="h-full w-full flex-col p-4 duration-200 lg:flex-row"
+            className="flex h-full w-full flex-col gap-x-1 px-10 duration-200 lg:flex-row lg:px-0"
           >
-            <div className="my-5 w-full lg:w-1/5 lg:flex-col">
-              <h5 className="font-bold">Share post:</h5>
-              <div ref={scope} className="">
+            <div className="mt-5 flex w-full flex-col items-center lg:mt-80 lg:w-1/5">
+              <h5 className="text-center font-bold">Share post:</h5>
+              <div ref={scope}>
                 <button
                   onClick={onButtonClick}
-                  className="relative rounded-full border-2 border-black px-6 py-2 text-sm text-black transition-colors hover:bg-slate-100 "
+                  className="relative rounded-full border-2 border-black px-6 py-2 text-sm text-black transition-colors hover:bg-slate-100"
                 >
-                  <span className="sr-only flex gap-x-2">
-                    a
-                    <FaLink />
-                    Share Link
-                  </span>
+                  <span className="sr-only flex gap-x-2">Share Link</span>
                   <span className="block h-8 overflow-hidden" aria-hidden>
                     {[
                       "C",
@@ -163,12 +156,8 @@ export default function PostPage({ params }: PostPageProps) {
                 </button>
               </div>
             </div>
-            <div className="mx-auto my-5 flex w-full flex-col px-10 lg:w-4/5">
-              <h1>{post.title}</h1>
-              <p>{HTMLReactParser(post.content)}</p>
-              <p>
-                <FaLink />
-              </p>
+            <div className="max-w-screen my-5 flex w-full flex-col lg:w-4/5">
+              <div className="break-words">{HTMLReactParser(post.content)}</div>
             </div>
           </div>
         )
