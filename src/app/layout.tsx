@@ -1,11 +1,8 @@
+// Styles Tailwind
 import "@/styles/globals.css";
 
 // Font
-
 import { PT_Sans } from "@next/font/google";
-
-// Theme Provider
-import { ThemeProvider } from "@/components/theme-provider";
 
 // TRPC
 import { TRPCReactProvider } from "@/trpc/react";
@@ -15,8 +12,8 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Provider from "@/components/Provider";
 
-// I am disabling this here because I know that i export font properly and properly use it
-// @next/next/google-font-display
+import { ThemeProvider } from "@/components/theme-provider";
+
 const PTSans = PT_Sans({
   style: ["normal"],
   weight: ["400", "700"],

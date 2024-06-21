@@ -1,10 +1,11 @@
 "use client";
 
+// Font for quotes
 import { Lora } from "@next/font/google";
+
+// Components
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
-
-import { motion } from "framer-motion";
 
 import {
   Carousel,
@@ -15,6 +16,10 @@ import {
   CarouselDots,
 } from "@/components/ui/carousel";
 
+// Framer motion
+import { motion } from "framer-motion";
+
+// Icons
 import { MoveRight } from "lucide-react";
 
 const LoraFont = Lora({

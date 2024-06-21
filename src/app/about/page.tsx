@@ -1,5 +1,4 @@
 // Components
-
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import AboutHero from "@/components/AboutHero";
 import AboutMeDescription from "@/components/AboutMeDescription";

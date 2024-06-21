@@ -1,3 +1,4 @@
+// Components
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 function Vodkie() {

@@ -1,6 +1,7 @@
-import React from "react";
+// Components
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+
 const Newsletter = () => {
   return (
     <div className="m-auto flex w-full flex-col items-center px-10 py-[8rem]">

@@ -1,13 +1,17 @@
 "use client";
-import { notFound } from "next/navigation";
-import { api } from "@/trpc/react";
+
+// Functions
 import HTMLReactParser from "html-react-parser";
+import { notFound } from "next/navigation";
 
 // Framer motion
 import { stagger, useAnimate, animate } from "framer-motion";
 
 // Icons
 import { FaLink } from "react-icons/fa";
+
+// tRPC
+import { api } from "@/trpc/react";
 
 interface PostPageProps {
   params: {
@@ -41,7 +45,7 @@ export default function PostPage({ params }: PostPageProps) {
   const [scope, animate] = useAnimate();
 
   const onButtonClick = () => {
-    const sparkles = Array.from({ length: 10 }); // Reduced number of sparkles
+    const sparkles = Array.from({ length: 5 });
     const sparklesAnimation: AnimationSequence = sparkles.map((_, index) => [
       `.sparkle-${index}`,
       {
@@ -51,7 +55,7 @@ export default function PostPage({ params }: PostPageProps) {
         opacity: 1,
       },
       {
-        duration: 1, // Increased duration
+        duration: 0.7,
         at: "<",
       },
     ]);
@@ -63,7 +67,7 @@ export default function PostPage({ params }: PostPageProps) {
         scale: 0,
       },
       {
-        duration: 1, // Increased duration
+        duration: 0.7,
         at: "<",
       },
     ]);
@@ -79,9 +83,9 @@ export default function PostPage({ params }: PostPageProps) {
       },
     ]);
 
-    animate([
+    void animate([
       ...sparklesReset,
-      [".letter", { y: -32 }, { duration: 0.4, delay: stagger(0.1) }], // Increased duration and delay
+      [".letter", { y: -32 }, { duration: 0.4, delay: stagger(0.1) }],
       ["button", { scale: 0.8 }, { duration: 0.2, at: "<" }],
       ["button", { scale: 1 }, { duration: 0.2 }],
       ...sparklesAnimation,
@@ -93,9 +97,9 @@ export default function PostPage({ params }: PostPageProps) {
   return (
     <article className="min-h-screen w-full text-black">
       {isLoading ? (
-        <div>Loading...</div> // Added loading text
+        <div></div>
       ) : error ? (
-        <p>Error loading posts</p>
+        <p className="px-2">Error loading posts</p>
       ) : (
         post && (
           <div
@@ -109,7 +113,10 @@ export default function PostPage({ params }: PostPageProps) {
                   onClick={onButtonClick}
                   className="relative rounded-full border-2 border-blue-600 px-6 py-2 text-sm text-blue-600 transition-colors hover:bg-blue-100 "
                 >
-                  <span className="sr-only">Share link</span>
+                  <span className="sr-only flex gap-x-2">
+                    <FaLink />
+                    Share link
+                  </span>
                   <span className="block h-8 overflow-hidden" aria-hidden>
                     {["S", "h", "a", "r", "e", " ", "l", "i", "n", "k"].map(
                       (letter, index) => (
@@ -127,25 +134,20 @@ export default function PostPage({ params }: PostPageProps) {
                     aria-hidden
                     className="pointer-events-none absolute inset-0 -z-10 block"
                   >
-                    {Array.from({ length: 10 }).map(
-                      (
-                        _,
-                        index, // Reduced number of sparkles
-                      ) => (
-                        <svg
-                          className={`absolute left-1/2 top-1/2 opacity-0 sparkle-${index}`}
-                          key={index}
-                          viewBox="0 0 122 117"
-                          width="10"
-                          height="10"
-                        >
-                          <path
-                            className="fill-blue-600"
-                            d="M64.39,2,80.11,38.76,120,42.33a3.2,3.2,0,0,1,1.83,5.59h0L91.64,74.25l8.92,39a3.2,3.2,0,0,1-4.87,3.4L61.44,96.19,27.09,116.73a3.2,3.2,0,0,1-4.76-3.46h0l8.92-39L1.09,47.92A3.2,3.2,0,0,1,3,42.32l39.74-3.56L58.49,2a3.2,3.2,0,0,1,5.9,0Z"
-                          />
-                        </svg>
-                      ),
-                    )}
+                    {Array.from({ length: 7 }).map((_, index) => (
+                      <svg
+                        className={`absolute left-1/2 top-1/2 opacity-0 sparkle-${index}`}
+                        key={index}
+                        viewBox="0 0 122 117"
+                        width="10"
+                        height="10"
+                      >
+                        <path
+                          className="fill-blue-600"
+                          d="M64.39,2,80.11,38.76,120,42.33a3.2,3.2,0,0,1,1.83,5.59h0L91.64,74.25l8.92,39a3.2,3.2,0,0,1-4.87,3.4L61.44,96.19,27.09,116.73a3.2,3.2,0,0,1-4.76-3.46h0l8.92-39L1.09,47.92A3.2,3.2,0,0,1,3,42.32l39.74-3.56L58.49,2a3.2,3.2,0,0,1,5.9,0Z"
+                        />
+                      </svg>
+                    ))}
                   </span>
                 </button>
               </div>

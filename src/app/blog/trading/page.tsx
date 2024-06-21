@@ -2,10 +2,10 @@
 
 // Functions
 import { motion } from "framer-motion";
-import Link from "next/link"; // Import Link from Next.js
 
 // Components
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import Link from "next/link";
 
 // Icons
 import { FaSearch } from "react-icons/fa";

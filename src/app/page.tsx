@@ -1,16 +1,10 @@
-// import { CreatePost } from "@/components/create-post";
-// import { getServerAuthSession } from "@/server/auth";
-// import { api } from "@/trpc/server";
+// Components
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Introduction from "@/components/Introduction";
 import VodkieApp from "@/components/VodkieApp";
 import Recommendations from "@/components/Newsletter";
 
 function Home() {
-  // Exmaple of hello and getting user session with TRPC
-  // const hello = await api.post.hello({ text: "from tRPC" });
-  // const session = await getServerAuthSession();
-
   return (
     <main className="min-h-screen">
       <div className="flex w-full items-center justify-center bg-[#FFF8EA] py-20">
@@ -29,22 +23,3 @@ function Home() {
 }
 
 export default Home;
-// Example of CRUD with tRPC
-
-// async function CrudShowcase() {
-//   const session = await getServerAuthSession();
-//   if (!session?.user)
-//     return (
-//       <div className="w-full max-w-xs">
-//         <p>a</p>
-//       </div>
-//     );
-
-//   return (
-//     <div className="w-full max-w-xs">
-//       <p>a</p>
-//       <p>Your email: {session.user.email}</p>
-//       <CreatePost />
-//     </div>
-//   );
-// }

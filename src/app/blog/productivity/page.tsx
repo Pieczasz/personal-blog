@@ -2,7 +2,7 @@
 
 // Functions
 import { motion } from "framer-motion";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link";
 
 // Components
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";

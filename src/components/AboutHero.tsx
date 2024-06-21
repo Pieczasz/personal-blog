@@ -1,5 +1,3 @@
-import React from "react";
-
 const AboutHero = () => {
   return (
     <div className="flex w-full flex-col lg:flex-row">

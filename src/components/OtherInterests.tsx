@@ -1,5 +1,3 @@
-import React from "react";
-
 const OtherInterests = () => {
   return (
     <div className="my-12 flex w-full flex-col items-center justify-center gap-y-16">

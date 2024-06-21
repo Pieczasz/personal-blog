@@ -1,4 +1,7 @@
+// Functions
 import { cn } from "@/lib/utils";
+
+// Types
 import type { ReactNode } from "react";
 
 const MaxWidthWrapper = ({

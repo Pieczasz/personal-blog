@@ -1,5 +1,3 @@
-import React from "react";
-
 const Introduction = () => {
   return (
     <div className="flex w-full flex-col border-b-[1.5px] border-t-[1.5px] border-primary/35 lg:flex-row">

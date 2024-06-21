@@ -17,6 +17,7 @@ import { api } from "@/trpc/react";
 function Life() {
   const { data: posts, isLoading, error } = api.post.getLifePosts.useQuery();
 
+  // TODO: Create here life landing page
   return <div></div>;
 }
 

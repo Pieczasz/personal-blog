@@ -1,11 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 // Functions
-import { motion } from "framer-motion";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link";
 
 // Components
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
@@ -13,6 +9,9 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 // Icons
 import { FaSearch } from "react-icons/fa";
 import { api } from "@/trpc/react";
+
+// Framer motion
+import { motion } from "framer-motion";
 
 function Life({ children }: { children: React.ReactNode }) {
   const { data: posts, isLoading, error } = api.post.getLifePosts.useQuery();
@@ -81,7 +80,7 @@ function Life({ children }: { children: React.ReactNode }) {
           {isLoading ? (
             <div></div>
           ) : error ? (
-            <p>Error loading posts</p>
+            <p className="px-2">Error loading posts</p>
           ) : (
             posts!.map((post) => (
               <Link
