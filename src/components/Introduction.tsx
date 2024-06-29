@@ -9,7 +9,7 @@ const Introduction = () => {
           <div className="flex flex-col gap-y-6">
             {/* //TODO: make it the acual post from blog and read more... */}
             <p className="text-xl">
-              I&apos;m a full-stack developer from Poland. My history begin in
+              I&apos;m a full-stack developer from Poland. My history began in
               may 2024. At that time I started learning react by creating
               website for my church parish (Yes I am catholic).
             </p>

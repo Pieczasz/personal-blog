@@ -21,6 +21,7 @@ import { motion } from "framer-motion";
 
 // Icons
 import { MoveRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const LoraFont = Lora({
   style: ["italic"],
@@ -49,7 +50,7 @@ const blogLinks: BlogLink[] = [
   },
   {
     title: "Coding",
-    description: "All i have learned about and my coding journey",
+    description: "All I have learned about and my coding journey",
     path: "/blog/coding",
   },
   {
@@ -58,12 +59,41 @@ const blogLinks: BlogLink[] = [
     path: "/blog/trading",
   },
 ];
-function Home() {
+
+function Blog() {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    // Set initial screen size
+    handleResize();
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const carouselOptions = isLargeScreen
+    ? {
+        containScroll: "trimSnaps",
+        slidesToScroll: 2, // For large devices
+      }
+    : {
+        containScroll: "trimSnaps",
+        slidesToScroll: 1, // Default for small devices
+      };
+
   return (
     <main className="flex min-h-screen flex-col">
       <div className="flex-col gap-y-10 lg:flex">
         <div className="m-auto flex max-w-screen-md flex-col gap-y-10 px-10 py-16 text-center">
-          {/* //TODO:  Create my own quotes*/}
           <h3 className="px-4 text-2xl font-bold underline">
             JUST FU****G DO IT
           </h3>
@@ -80,11 +110,14 @@ function Home() {
         </div>
         <div className="flex flex-col gap-y-10">
           <div className="m-auto flex-col gap-x-0 gap-y-2 px-4 pb-28 text-center lg:flex-row">
-            <Carousel className="w-full max-w-xs">
+            <Carousel
+              className="w-full max-w-xs lg:max-w-screen-sm"
+              opts={carouselOptions}
+            >
               <CarouselContent>
                 {blogLinks.map((blogLink, index) => (
-                  <CarouselItem key={index}>
-                    <Link href={blogLink.path} className="p-1 ">
+                  <CarouselItem key={index} className="basis-full lg:basis-1/2">
+                    <Link href={blogLink.path} className="p-1">
                       <Card>
                         <CardContent className="flex h-[480px] flex-col items-center justify-center gap-y-6 rounded-xl p-6 duration-150 ease-out hover:bg-gray-200 hover:bg-opacity-35">
                           <h2
@@ -119,4 +152,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Blog;
