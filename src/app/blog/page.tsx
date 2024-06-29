@@ -61,7 +61,7 @@ const blogLinks: BlogLink[] = [
 ];
 
 function Blog() {
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -80,15 +80,17 @@ function Blog() {
     };
   }, []);
 
-  const carouselOptions = isLargeScreen
-    ? {
-        containScroll: "trimSnaps",
-        slidesToScroll: 2, // For large devices
-      }
-    : {
-        containScroll: "trimSnaps",
-        slidesToScroll: 1, // Default for small devices
-      };
+  const defaultOptions = {
+    containScroll: "trimSnaps",
+    slidesToScroll: 2, // Default for large devices
+  };
+
+  const smallDeviceOptions = {
+    containScroll: "trimSnaps",
+    slidesToScroll: 1, // Override for small devices
+  };
+
+  const carouselOptions = isLargeScreen ? defaultOptions : smallDeviceOptions;
 
   return (
     <main className="flex min-h-screen flex-col">
