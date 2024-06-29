@@ -1,6 +1,11 @@
+"use client";
+
 // Components
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+
+// Framer motion
+import { motion } from "framer-motion";
 
 const Newsletter = () => {
   return (
@@ -15,12 +20,14 @@ const Newsletter = () => {
           placeholder="Email address"
           className="h-12 w-56 rounded-none"
         />
-        <Button
-          type="submit"
-          className="h-12 w-32 rounded-none text-lg font-bold text-black"
-        >
-          Subscribe
-        </Button>
+        <motion.div whileHover={{ y: -5 }} whileTap={{ y: -1 }}>
+          <Button
+            type="submit"
+            className="h-12 w-32 rounded-none text-lg font-bold text-black"
+          >
+            Subscribe
+          </Button>
+        </motion.div>
       </div>
       <div>
         <p className="pt-10 text-left text-xl lg:text-center">
