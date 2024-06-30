@@ -3,9 +3,6 @@
 // Functions
 import Link from "next/link";
 
-// Components
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-
 // Icons
 import { FaSearch } from "react-icons/fa";
 import { api } from "@/trpc/react";

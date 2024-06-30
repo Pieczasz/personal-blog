@@ -5,7 +5,7 @@ import HTMLReactParser from "html-react-parser";
 import { notFound } from "next/navigation";
 
 // Framer motion
-import { stagger, useAnimate, animate } from "framer-motion";
+import { stagger, useAnimate, type animate } from "framer-motion";
 
 // tRPC
 import { api } from "@/trpc/react";

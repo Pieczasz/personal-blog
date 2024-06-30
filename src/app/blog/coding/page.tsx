@@ -1,7 +1,6 @@
 "use client";
 
 // Functions
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 // Components
@@ -9,6 +8,9 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 // Icons
 import { FaSearch } from "react-icons/fa";
+
+// Framer motion
+import { motion } from "framer-motion";
 
 function Coding() {
   return (
