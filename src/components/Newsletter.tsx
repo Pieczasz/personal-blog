@@ -14,20 +14,23 @@ const Newsletter = () => {
         Stay updated and sign in
       </h2>
       <h2 className="pt-1 text-3xl  font-bold">for my newsletter</h2>
-      <div className="flex w-full max-w-sm items-center justify-center pt-6">
+      <div className="flex w-full max-w-sm items-center justify-center gap-x-4 pt-6">
         <Input
           type="email"
           placeholder="Email address"
-          className="h-12 w-56 rounded-none"
+          className="h-12 w-56 rounded-2xl"
         />
-        <motion.div whileHover={{ y: -5 }} whileTap={{ y: -1 }}>
-          <Button
-            type="submit"
-            className="h-12 w-32 rounded-none text-lg font-bold text-black"
-          >
-            Subscribe
-          </Button>
-        </motion.div>
+        <div className="flex flex-col">
+          <motion.div whileHover={{ y: -3 }} whileTap={{ y: 7 }}>
+            <Button
+              type="submit"
+              className="h-12 w-32 rounded-2xl text-lg font-bold text-black"
+            >
+              Subscribe
+            </Button>
+          </motion.div>
+          <div className="mt-[-2rem] h-10 w-32 rounded-2xl bg-primary/35 px-4 py-2" />
+        </div>
       </div>
       <div>
         <p className="pt-10 text-left text-xl lg:text-center">

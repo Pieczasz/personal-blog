@@ -28,13 +28,16 @@ const VodkieApp = () => {
             You can do this easily using the Vodkie app.
           </p>
 
-          <Link href="/vodkie" className="text-center lg:text-left">
-            <motion.div whileHover={{ y: -5 }} whileTap={{ y: -1 }}>
-              <Button className="mt-6 w-1/3 rounded-none text-lg font-bold text-black">
-                Learn more
-              </Button>
-            </motion.div>
-          </Link>
+          <div className="flex flex-col">
+            <Link href="/vodkie" className="text-center lg:text-left">
+              <motion.div whileHover={{ y: -3 }} whileTap={{ y: 7 }}>
+                <Button className="mt-6 w-1/3 rounded-2xl text-lg font-bold text-black">
+                  Learn more
+                </Button>
+              </motion.div>
+            </Link>
+            <div className="mt-[-2rem] h-10 w-32 rounded-2xl bg-primary/35 px-4 py-2" />
+          </div>
         </div>
       </div>
     </div>
