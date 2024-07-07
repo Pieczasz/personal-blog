@@ -24,7 +24,7 @@ const Newsletter = () => {
           <motion.div whileHover={{ y: -3 }} whileTap={{ y: 7 }}>
             <Button
               type="submit"
-              className="h-12 w-32 rounded-2xl text-lg font-bold text-black"
+              className="z-50 h-12 w-32 rounded-2xl text-lg font-bold text-black"
             >
               Subscribe
             </Button>

@@ -31,38 +31,54 @@ function Life({ children }: { children: React.ReactNode }) {
         <hr className="w-full border-primary/35" />
         <div className="my-5 flex w-full flex-col">
           <div className="mb-4 flex w-full max-w-md items-center justify-center gap-x-4 px-2">
-            <motion.div
-              className="min-w-16 rounded-2xl bg-[#DAF7A6] text-center font-bold"
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link href="/blog/life">
-                <h4 className="block p-2">Life</h4>
-              </Link>
-            </motion.div>
-            <motion.div
-              className="min-w-16 rounded-2xl bg-[#FFC300] text-center font-bold"
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link href="/blog/productivity">
-                <h4 className="block p-2">Productivity</h4>
-              </Link>
-            </motion.div>
-            <motion.div
-              className="min-w-16 rounded-2xl bg-[#ADD8E6] text-center font-bold"
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link href="/blog/coding">
-                <h4 className="block p-2">Coding</h4>
-              </Link>
-            </motion.div>
-            <motion.div
-              className="min-w-16 rounded-2xl bg-[#f6846a] text-center font-bold"
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link href="/blog/trading">
-                <h4 className="block p-2">Trading</h4>
-              </Link>
-            </motion.div>
+            <div className="flex flex-col">
+              <motion.div
+                className="z-50 min-w-16 rounded-2xl bg-[#DAF7A6] text-center font-bold"
+                whileHover={{ y: -3 }}
+                whileTap={{ y: 7 }}
+              >
+                <Link href="/blog/life">
+                  <h4 className="block p-2">Life</h4>
+                </Link>
+              </motion.div>
+              <div className="mt-[-2rem] h-10 w-16 rounded-2xl bg-[#DAF7A6]/35 px-4 py-2" />
+            </div>
+            <div className="flex flex-col">
+              <motion.div
+                className="z-50 min-w-16 rounded-2xl bg-[#FFC300] text-center font-bold"
+                whileHover={{ y: -3 }}
+                whileTap={{ y: 7 }}
+              >
+                <Link href="/blog/productivity">
+                  <h4 className="block p-2">Productivity</h4>
+                </Link>
+              </motion.div>
+              <div className="mt-[-2rem] h-10 w-32 rounded-2xl bg-[#FFC300]/35 px-4 py-2" />
+            </div>
+            <div className="flex flex-col">
+              <motion.div
+                className="z-50 min-w-16 rounded-2xl bg-[#ADD8E6] text-center font-bold"
+                whileHover={{ y: -3 }}
+                whileTap={{ y: 7 }}
+              >
+                <Link href="/blog/coding">
+                  <h4 className="block p-2">Coding</h4>
+                </Link>
+              </motion.div>
+              <div className="mt-[-2rem] h-10 w-20 rounded-2xl bg-[#ADD8E6]/35 px-4 py-2" />
+            </div>
+            <div className="flex flex-col">
+              <motion.div
+                className="z-50 min-w-16 rounded-2xl bg-[#F6846A] text-center font-bold"
+                whileHover={{ y: -3 }}
+                whileTap={{ y: 7 }}
+              >
+                <Link href="/blog/trading">
+                  <h4 className="block p-2">Trading</h4>
+                </Link>
+              </motion.div>
+              <div className="mt-[-2rem] h-10 w-20 rounded-2xl bg-[#F6846A]/35 px-4 py-2" />
+            </div>
           </div>
           <div className="w-full px-3">
             <p>
@@ -88,7 +104,8 @@ function Life({ children }: { children: React.ReactNode }) {
                 <motion.div
                   key={post.id}
                   className="h-full w-full p-4 duration-200 hover:bg-slate-100"
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ y: -3 }}
+                  whileTap={{ y: 7 }}
                 >
                   <p>{post.title}</p>
                 </motion.div>

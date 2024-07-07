@@ -31,7 +31,7 @@ const VodkieApp = () => {
           <div className="flex flex-col">
             <Link href="/vodkie" className="text-center lg:text-left">
               <motion.div whileHover={{ y: -3 }} whileTap={{ y: 7 }}>
-                <Button className="mt-6 w-1/3 rounded-2xl text-lg font-bold text-black">
+                <Button className="z-50 mt-6 w-1/3 rounded-2xl text-lg font-bold text-black">
                   Learn more
                 </Button>
               </motion.div>
