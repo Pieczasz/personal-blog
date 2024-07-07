@@ -32,7 +32,7 @@ function Trading({ children }: { children: React.ReactNode }) {
           <FaSearch className="h-5 w-5 cursor-pointer hover:scale-[1.15]" />
         </div>
         <hr className="w-full border-primary/35" />
-        <div className="my-5 flex w-full flex-col">
+        <div className="flex w-full flex-col border-b border-y-primary/35 py-5">
           <div className="mb-4 flex w-full max-w-md items-center justify-center gap-x-4 px-2">
             <div className="flex flex-col">
               <motion.div
@@ -102,7 +102,7 @@ function Trading({ children }: { children: React.ReactNode }) {
               <motion.div
                 key={post.id}
                 whileHover={{ height: "4.5rem" }}
-                className="flex cursor-pointer items-center justify-start border-y border-y-primary/35 hover:bg-slate-100"
+                className="flex cursor-pointer items-center justify-start border-b border-y-primary/35 hover:bg-slate-100"
                 onClick={() => router.push(`/blog/trading/${post.slug}`)}
               >
                 <div className="flex h-full w-full items-center p-4 duration-200">
