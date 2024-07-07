@@ -114,6 +114,7 @@ function Blog() {
           <div className="m-auto flex-col gap-x-0 gap-y-2 px-4 pb-28 text-center lg:flex-row">
             <Carousel
               className="w-full max-w-xs lg:max-w-screen-sm"
+              // @ts-expect-error we expect error, because type of opts isn't importable
               opts={carouselOptions}
             >
               <CarouselContent>
