@@ -24,12 +24,12 @@ const Newsletter = () => {
           <motion.div whileHover={{ y: -3 }} whileTap={{ y: 7 }}>
             <Button
               type="submit"
-              className="z-50 h-12 w-32 rounded-2xl text-lg font-bold text-black"
+              className="z-50 h-12 w-28 rounded-2xl text-lg font-bold text-black"
             >
               Subscribe
             </Button>
           </motion.div>
-          <div className="mt-[-2rem] h-10 w-32 rounded-2xl bg-primary/35 px-4 py-2" />
+          <div className="mt-[-2rem] h-10 w-28 rounded-2xl bg-primary/35 px-4 py-2" />
         </div>
       </div>
       <div>

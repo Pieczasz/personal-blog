@@ -12,7 +12,7 @@ function About() {
           <AboutHero />
         </MaxWidthWrapper>
       </div>
-      <div className="m-auto flex max-w-screen-md flex-col items-center justify-center text-left">
+      <div className="m-auto flex max-w-screen-lg flex-col items-center justify-center text-left">
         <AboutMeDescription />
       </div>
       <hr className="border-primary/35" />
