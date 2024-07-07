@@ -105,7 +105,7 @@ function Blog() {
           </h1>
           <h2 className="font-weight-[500]">― Marcus Aurelius , Meditations</h2>
           <h3 className="px-4 text-2xl">
-            This quote read by Marcus Aurelius should led you to think that You
+            This quote wrote by Marcus Aurelius should led you to think that You
             don&apos;t need to be as other would like you. What You should
             understand is that you should try to be better version of yourself.
           </h3>

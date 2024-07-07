@@ -2,6 +2,7 @@
 
 // Functions
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 // Icons
 import { FaSearch } from "react-icons/fa";
@@ -12,6 +13,8 @@ import { motion } from "framer-motion";
 
 function Life({ children }: { children: React.ReactNode }) {
   const { data: posts, isLoading, error } = api.post.getLifePosts.useQuery();
+
+  const router = useRouter();
 
   return (
     <main className="flex min-h-screen flex-col items-end lg:flex-row">
@@ -84,8 +87,8 @@ function Life({ children }: { children: React.ReactNode }) {
             <p>
               Knowing what you want in{" "}
               <span className="rounded-xl bg-sky-100 p-1 font-bold">life</span>{" "}
-              isn&apos;t normal. Modern society expect you to know what you want
-              but in reality it is really hard, and only a few people know.
+              isn&apos;t normal. Modern society expects you to know what you
+              want but in reality it is really hard, and only a few people know.
             </p>
           </div>
         </div>
@@ -96,20 +99,16 @@ function Life({ children }: { children: React.ReactNode }) {
             <p className="px-2">Error loading posts</p>
           ) : (
             posts!.map((post) => (
-              <Link
-                href={`/blog/life/${post.slug}`}
+              <motion.div
                 key={post.id}
-                className="border-y border-y-primary/35"
+                whileHover={{ height: "4.5rem" }}
+                className="flex cursor-pointer items-center justify-start border-y border-y-primary/35 hover:bg-slate-100"
+                onClick={() => router.push(`/blog/life/${post.slug}`)}
               >
-                <motion.div
-                  key={post.id}
-                  className="h-full w-full p-4 duration-200 hover:bg-slate-100"
-                  whileHover={{ y: -3 }}
-                  whileTap={{ y: 7 }}
-                >
+                <div className="flex h-full w-full items-center p-4 duration-200">
                   <p>{post.title}</p>
-                </motion.div>
-              </Link>
+                </div>
+              </motion.div>
             ))
           )}
         </div>
