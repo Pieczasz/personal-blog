@@ -54,6 +54,33 @@ export const postRouter = createTRPCRouter({
 
     return lifePosts;
   }),
+  getProductivityPosts: publicProcedure.query(async ({ ctx }) => {
+    const lifePosts = await ctx.db
+      .select()
+      .from(posts)
+      .where(eq(posts.type, "productivity"))
+      .orderBy(desc(posts.updatedAt));
+
+    return lifePosts;
+  }),
+  getCodingPosts: publicProcedure.query(async ({ ctx }) => {
+    const lifePosts = await ctx.db
+      .select()
+      .from(posts)
+      .where(eq(posts.type, "coding"))
+      .orderBy(desc(posts.updatedAt));
+
+    return lifePosts;
+  }),
+  getTradingPosts: publicProcedure.query(async ({ ctx }) => {
+    const lifePosts = await ctx.db
+      .select()
+      .from(posts)
+      .where(eq(posts.type, "trading"))
+      .orderBy(desc(posts.updatedAt));
+
+    return lifePosts;
+  }),
   getPostBySlug: publicProcedure
     .input(z.object({ slug: z.string() }))
     .query(async ({ ctx, input }) => {

@@ -19,7 +19,6 @@ interface SocialsLink {
   icon: JSX.Element;
 }
 
-//TODO: add my personal socials
 const links: SocialsLink[] = [
   {
     path: "https://x.com/Pieczasz",

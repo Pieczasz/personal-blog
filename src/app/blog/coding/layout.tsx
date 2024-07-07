@@ -11,8 +11,9 @@ import { api } from "@/trpc/react";
 // Framer motion
 import { motion } from "framer-motion";
 
-function Life({ children }: { children: React.ReactNode }) {
-  const { data: posts, isLoading, error } = api.post.getLifePosts.useQuery();
+function Coding({ children }: { children: React.ReactNode }) {
+  // getCodingPosts
+  const { data: posts, isLoading, error } = api.post.getCodingPosts.useQuery();
 
   const router = useRouter();
 
@@ -103,7 +104,7 @@ function Life({ children }: { children: React.ReactNode }) {
                 key={post.id}
                 whileHover={{ height: "4.5rem" }}
                 className="flex cursor-pointer items-center justify-start border-y border-y-primary/35 hover:bg-slate-100"
-                onClick={() => router.push(`/blog/life/${post.slug}`)}
+                onClick={() => router.push(`/blog/coding/${post.slug}`)}
               >
                 <div className="flex h-full w-full items-center p-4 duration-200">
                   <p>{post.title}</p>
@@ -117,4 +118,4 @@ function Life({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default Life;
+export default Coding;

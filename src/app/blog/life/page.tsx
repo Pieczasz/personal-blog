@@ -18,7 +18,7 @@ function Life() {
   const { data: posts, isLoading, error } = api.post.getLifePosts.useQuery();
 
   // TODO: Create here life landing page
-  return <div></div>;
+  return <main className="flex min-h-screen flex-col"></main>;
 }
 
 export default Life;
