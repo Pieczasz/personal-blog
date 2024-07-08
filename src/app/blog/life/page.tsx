@@ -1,9 +1,8 @@
 "use client";
 
 function Life() {
-  // TODO: Create here life landing page
   return (
-    <main className="flex min-h-screen flex-col px-10 py-24">
+    <article className="flex min-h-screen flex-col px-10 py-24">
       <h2 className="pb-8 font-bold">LIFE</h2>
       <h4>
         Navigate using the links on the left or view posts recommended by me
@@ -18,7 +17,7 @@ function Life() {
         <li>recommendation 4</li>
         <li>recommendation 5</li>
       </ul>
-    </main>
+    </article>
   );
 }
 
