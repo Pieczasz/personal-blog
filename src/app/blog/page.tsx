@@ -95,7 +95,7 @@ function Blog() {
   return (
     <main className="flex min-h-screen flex-col">
       <div className="flex-col gap-y-10 lg:flex">
-        <div className="m-auto flex max-w-screen-lg flex-col gap-y-10 px-10 py-16 text-center">
+        <div className="m-auto flex max-w-screen-lg flex-col gap-y-10 px-10 py-24 text-center">
           <h3 className="px-4 text-2xl font-bold underline">
             JUST FU****G DO IT
           </h3>

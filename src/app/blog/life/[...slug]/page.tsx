@@ -156,7 +156,7 @@ export default function PostPage({ params }: PostPageProps) {
                 </button>
               </div>
             </div>
-            <div className="max-w-screen my-5 flex w-full flex-col lg:w-4/5">
+            <div className="max-w-screen py-24 flex w-full flex-col lg:w-4/5">
               <div className="break-words">{HTMLReactParser(post.content)}</div>
             </div>
           </div>

@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const Newsletter = () => {
   return (
-    <div className="m-auto flex w-full flex-col items-center px-10 py-[8rem]">
+    <div className="m-auto flex w-full flex-col items-center px-10 py-24">
       <h2 className="text-center text-3xl font-bold">
         Stay updated and sign in
       </h2>
