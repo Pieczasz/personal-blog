@@ -13,10 +13,15 @@ function CreatePost() {
   const router = useRouter();
 
   // If user isn't authenticated, redirect to sign in
-  if (session.status === "unauthenticated") router.replace("/api/auth/signin");
+  if (session.status === "unauthenticated") {
+    if (typeof window !== "undefined") {
+      router.replace("/api/auth/signin");
+    }
+    return null;
+  }
 
   // If user is not bartekp854@gmail.com, return false (don't render CreatePostForm)
-  if (session.data?.user?.email !== "bartekp854@gmail.com") return false;
+  if (session.data?.user?.email !== "bartekp854@gmail.com") return null;
 
   return (
     <main className="flex min-h-screen flex-col">

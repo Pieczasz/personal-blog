@@ -9,7 +9,9 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 // Components
-import JoditEditor from "jodit-react";
+import dynamic from "next/dynamic";
+
+const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 
 import {
   Form,
@@ -37,7 +39,7 @@ const postFormSchema = z.object({
   title: z.string().min(3, { message: "Title must be at least 3 characters." }),
   slug: z.string().min(3, { message: "Slug must be at least 3 characters." }),
   content: z.string().min(20, {
-    message: "Conent must be at least 20 characters.",
+    message: "Content must be at least 20 characters.",
   }),
   type: z.enum(["life", "productivity", "coding", "trading"]),
   createdAt: z.string(),
