@@ -33,13 +33,13 @@ const Newsletter = () => {
         </div>
       </div>
       <div>
-        <p className="pt-10 text-left text-xl lg:text-center">
+        <p className="pt-10  text-center text-xl">
           My newsletter includes my recommendations
         </p>
-        <p className="pt-1 text-left text-xl lg:text-center">
+        <p className="pt-1  text-center text-xl">
           about books, technologies, life, travelling,
         </p>
-        <p className="pt-1 text-left text-xl lg:text-center">and more...</p>
+        <p className="pt-1  text-center text-xl">and more...</p>
       </div>
     </div>
   );

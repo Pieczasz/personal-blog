@@ -2,7 +2,7 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Introduction from "@/components/Introduction";
 import VodkieApp from "@/components/VodkieApp";
-import Recommendations from "@/components/Newsletter";
+import Newsletter from "@/components/Newsletter";
 
 function Home() {
   return (
@@ -15,7 +15,7 @@ function Home() {
           </h2>
         </MaxWidthWrapper>
       </div>
-      <Recommendations />
+      <Newsletter />
       <Introduction />
       <VodkieApp />
     </main>

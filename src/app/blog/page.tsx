@@ -61,15 +61,14 @@ const blogLinks: BlogLink[] = [
 ];
 
 function Blog() {
-  const [isLargeScreen, setIsLargeScreen] = useState(true);
+  const [isLargeScreen, setIsLargeScreen] = useState(
+    typeof window !== "undefined" ? window.innerWidth >= 1024 : true,
+  );
 
   useEffect(() => {
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 1024);
     };
-
-    // Set initial screen size
-    handleResize();
 
     // Add event listener
     window.addEventListener("resize", handleResize);
@@ -80,17 +79,19 @@ function Blog() {
     };
   }, []);
 
-  const defaultOptions = {
+  const largeDeviceOptions = {
     containScroll: "trimSnaps",
-    slidesToScroll: 2, // Default for large devices
+    slidesToScroll: 2, // Large devices option
   };
 
   const smallDeviceOptions = {
     containScroll: "trimSnaps",
-    slidesToScroll: 1, // Override for small devices
+    slidesToScroll: 1, // Small devices option
   };
 
-  const carouselOptions = isLargeScreen ? defaultOptions : smallDeviceOptions;
+  const carouselOptions = isLargeScreen
+    ? largeDeviceOptions
+    : smallDeviceOptions;
 
   return (
     <main className="flex min-h-screen flex-col">

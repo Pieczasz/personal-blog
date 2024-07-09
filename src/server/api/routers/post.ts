@@ -54,6 +54,7 @@ export const postRouter = createTRPCRouter({
 
     return lifePosts;
   }),
+
   getProductivityPosts: publicProcedure.query(async ({ ctx }) => {
     const lifePosts = await ctx.db
       .select()
@@ -63,6 +64,7 @@ export const postRouter = createTRPCRouter({
 
     return lifePosts;
   }),
+
   getCodingPosts: publicProcedure.query(async ({ ctx }) => {
     const lifePosts = await ctx.db
       .select()
@@ -72,6 +74,7 @@ export const postRouter = createTRPCRouter({
 
     return lifePosts;
   }),
+
   getTradingPosts: publicProcedure.query(async ({ ctx }) => {
     const lifePosts = await ctx.db
       .select()
@@ -81,6 +84,17 @@ export const postRouter = createTRPCRouter({
 
     return lifePosts;
   }),
+
+  getLatestPosts: publicProcedure.query(async ({ ctx }) => {
+    const latestPosts = await ctx.db
+      .select()
+      .from(posts)
+      .orderBy(desc(posts.updatedAt))
+      .limit(3);
+
+    return latestPosts;
+  }),
+
   getPostBySlug: publicProcedure
     .input(z.object({ slug: z.string() }))
     .query(async ({ ctx, input }) => {
