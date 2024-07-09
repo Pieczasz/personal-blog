@@ -53,24 +53,17 @@ const Introduction = () => {
                 <Link
                   key={post.id}
                   href={`/blog/${post.type}/${post.slug}`}
-                  className="group relative inline-flex w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-b-4 border-primary px-6 py-7 font-medium text-primary shadow-md transition duration-300 ease-out"
+                  className="group relative flex w-full items-center justify-center overflow-hidden rounded-2xl border-2 border-primary px-6 py-7 text-primary shadow-md duration-300 ease-in-out"
                 >
-                  <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-primary text-white duration-300 group-hover:translate-x-0">
-                    <svg
-                      className="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
+                  <span className="absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-primary text-white duration-300 ease-in-out group-hover:translate-x-0">
+                    <svg className="h-6 w-6" stroke="white" viewBox="0 0 24 24">
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
                         stroke-width="2"
                         d="M14 5l7 7m0 0l-7 7m7-7H3"
                       ></path>
                     </svg>
                   </span>
-                  <span className="justify-left ease absolute ml-10 flex h-full w-full transform items-center text-lg text-black transition-all duration-300 group-hover:translate-x-full">
+                  <span className="absolute ml-10 flex h-full w-full transform items-center text-lg text-black transition-all duration-300 ease-in-out group-hover:translate-x-full">
                     {post.title}
                   </span>
                 </Link>
