@@ -115,14 +115,14 @@ function Life({ children }: { children: React.ReactNode }) {
       )}
       <div className="flex w-full">{children}</div>
       {/* Side bar */}
-      <div className="hidden h-full min-h-screen border-l border-primary/35 lg:block lg:w-[39%] xl:w-[30%]">
+      <div className="hidden h-full min-h-screen border-l border-primary/35 bg-white lg:block lg:w-[39%] xl:w-[30%]">
         <hr className="w-full" />
-        <div className="my-3 flex w-full items-center justify-center px-4">
+        <div className="my-3 flex w-full items-center justify-center bg-white px-4">
           <input
             type="text"
             name="search"
             id="search"
-            className="w-full p-1 focus:outline-none focus:ring-transparent"
+            className="focus:ring-transparen bg-whitet w-full p-1 focus:outline-none"
             placeholder="Search through posts"
           />
           <FaSearch className="h-5 w-5 cursor-pointer hover:scale-[1.15]" />
