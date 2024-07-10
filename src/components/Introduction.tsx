@@ -26,13 +26,13 @@ const Introduction = () => {
             {/* //TODO: make it the acual post from blog and read more... */}
             <p className="text-xl">
               I&apos;m a full-stack developer from Poland. My history began in
-              may 2024. At that time I started learning react by creating
-              website for my church parish (Yes I am catholic).
+              May 2024. At that time, I started learning to react by creating a
+              website for my church parish (yes, I am Catholic).
             </p>
             <p className="text-xl">
-              After that I started creating Vodkie using React Native expo.
-              Besides that at the same time I was creating blog that you are now
-              able to read. Read more...
+              After that, I started creating Vodkie using React Native Expo.
+              Besides that, at the same time, I was creating a blog that you are
+              now able to read. Read more...
             </p>
           </div>
         </div>

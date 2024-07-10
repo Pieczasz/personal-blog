@@ -45,8 +45,8 @@ const OtherInterests = () => {
         >
           <h3 className="text-2xl font-bold">Swimming</h3>
           <p className="text-xl">
-            After I dropped dancing and acrobatics, I started swimming. I was
-            attending swimming classes for 3 years and then dropped out. Not
+            After I dropped dancing and acrobatics, I started swimming. I
+            attended swimming classes for 3 years and then dropped out. Not
             because I didn&apos;t have enough time, but because of the price and
             the fact that I can still swim recreationally, which I do.
           </p>
@@ -62,11 +62,11 @@ const OtherInterests = () => {
         >
           <h3 className="text-2xl font-bold">Architecture</h3>
           <p className="text-xl">
-            Programming and IT path wasn&apos;t my first choice. Actually I
+            Programming and IT paths weren&apos;t my first choice. Actually, I
             really wanted to be an architect. The only problem was that in
-            Poland we don&apos;t have any architecture high school. Because of
-            that I submitted my application to the IT school and I really loved
-            this path.
+            Poland, we don&apos;t have any architecture high schools. Because of
+            that, I submitted my application to the IT school, and I really
+            loved this path.
           </p>
         </motion.div>
         <motion.div
@@ -81,7 +81,7 @@ const OtherInterests = () => {
             classes, I also started to play the guitar. I was taking guitar
             lessons for a few years, but my teacher got sick (heart diseases),
             and because of that, he couldn&apos;t teach me any more. At that
-            time I took a break for 3 years. After my break, I came back and
+            time, I took a break for 3 years. After my break, I came back and
             started learning by myself. I am really grateful that I was able to
             learn guitar by watching YouTube tutorials. I play guitar to this
             day, and I think that I am not that bad at it.
@@ -99,8 +99,8 @@ const OtherInterests = () => {
             wanted to start a YouTube channel, and because of that, I started
             learning how to edit videos. I really enjoyed it, but I am not good
             at it. Because of that, I never really felt progress in my video
-            editing skills. I started something new: networking and programming,
-            and found out that I am a really good problem solver.
+            editing skills. I started something new—networking and
+            programming—and found out that I am a really good problem solver.
           </p>
         </motion.div>
       </div>

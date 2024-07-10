@@ -8,10 +8,10 @@ const AboutMeDescription = () => {
           trading, training, and every aspect of my life.
         </p>
         <p className="text-xl">
-          If you ask me how I do it, I will tell you that I don&apos;t know. I I
+          If you ask me how I do it, I will tell you that I don&apos;t know. I
           feel that I was just born to do what I am doing. I created this blog
           to help other teens be productive and motivated to learn and do what
-          they fell to do.
+          they feel they should do.
         </p>
         <p className="text-xl">
           I hope you enjoy it and feel the same as I do. I am not trying to fake
@@ -27,28 +27,30 @@ const AboutMeDescription = () => {
 
       <div className="flex flex-col gap-y-6 px-10 py-16">
         <h2 className="text-4xl font-bold">About Me</h2>
-        <p className="text-xl">Here you can see few random facts about me...</p>
+        <p className="text-xl">
+          Here you can see a few random facts about me...
+        </p>
         <p className="text-xl">
           My coding journey started in 2023. I first started with Python, then
-          learned javascript, html, and css. I was excited about creating
-          websites and mobile apps, and then I learned React, which is, I think,
-          the best framework for me. I just love creating single components and
-          then using them to create one page again and again until I have the
-          full website done.
+          learned JS, HTML, and CSS. I was excited about creating websites and
+          mobile apps, and then I learned React, which is, I think, the best
+          framework for me. I just love creating single components and then
+          using them to create one page again and again until I have the full
+          website done.
         </p>
         <p className="text-xl">
           I started trading at the start of 2023 (right before I started
           learning programming). I was excited by the fact that you can earn so
           much, but you also risk so much at the same time. Therefore, I created
           rules to make my trading consistent and profitable. I am trading to
-          become financial free before my 30s.
+          become financially free before my 30s.
         </p>
         <p className="text-xl">
           At the age of 15, my self-esteem was really low. I was skinny and
-          short. and had terrible hairstyle. I was also afraid of being
+          short. and had terrible hairstyles. I was also afraid of being
           rejected. Because of that, I started my journey with gyms and
-          training. Since i began going to gym I was really motivated, and I
-          think that I really appreciate myself.
+          training. Since I began going to the gym I&apos;ve been really
+          motivated, and I think that I really appreciate myself.
         </p>
       </div>
     </div>
