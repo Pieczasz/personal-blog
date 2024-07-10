@@ -21,8 +21,6 @@ declare global {
 }
 
 const Newsletter = () => {
-  const [isReady, setIsReady] = useState(false);
-
   useEffect(() => {
     // Define the CustomSubstackWidget on the window object
     window.CustomSubstackWidget = {
@@ -32,9 +30,9 @@ const Newsletter = () => {
       theme: "custom",
       colors: {
         primary: "#FFFFFF",
-        input: "#334155",
+        input: "#FFFFFF",
         email: "#FFFFFF",
-        text: "#000000",
+        text: "#FFFFFF",
       },
     };
 
@@ -98,8 +96,6 @@ const Newsletter = () => {
             "mt-[-2rem] h-10 w-28 rounded-2xl bg-primary/35 px-4 py-2";
           buttonWrapper.appendChild(extraDiv);
 
-          setIsReady(true);
-
           clearInterval(interval);
         }
       }
@@ -116,7 +112,7 @@ const Newsletter = () => {
       <h2 className="pt-1 text-3xl font-bold">for my newsletter</h2>
       <div
         id="custom-substack-embed"
-        className={`max-w-[45ch] grid-cols-2 place-content-center place-items-center items-center justify-center gap-4 text-center md:grid md:grid-cols-1 ${isReady ? "" : "hidden"}`}
+        className="max-w-[45ch] grid-cols-2 place-content-center place-items-center items-center justify-center gap-4 text-center md:grid md:grid-cols-1 "
       ></div>
       <div>
         <p className="pt-10 text-center text-xl">
