@@ -57,10 +57,7 @@ const Introduction = () => {
                 >
                   <span className="absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-primary text-white duration-300 ease-in-out group-hover:translate-x-0">
                     <svg className="h-6 w-6" stroke="white" viewBox="0 0 24 24">
-                      <path
-                        stroke-width="2"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      ></path>
+                      <path strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
                   </span>
                   <span className="absolute ml-10 flex h-full w-full transform items-center text-lg text-black transition-all duration-300 ease-in-out group-hover:translate-x-full">
