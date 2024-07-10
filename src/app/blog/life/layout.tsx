@@ -39,54 +39,54 @@ function Life({ children }: { children: React.ReactNode }) {
           />
         </div>
         <hr className="w-full border-primary/35" />
-        <div className=" my-4 flex w-full items-center justify-center gap-x-4">
+        <div className="m-4 flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-4">
           <div className="flex flex-col">
             <motion.div
-              className="z-50 w-16 rounded-2xl bg-[#DAF7A6] text-center font-bold"
+              className="z-50 w-14 rounded-2xl bg-[#DAF7A6] text-center font-bold"
               whileHover={{ y: -3 }}
               whileTap={{ y: 7 }}
             >
               <Link href="/blog/life">
-                <h4 className="block p-2">Life</h4>
+                <h5 className="block p-2">Life</h5>
               </Link>
             </motion.div>
-            <div className="mt-[-2rem] h-10 w-16 rounded-2xl bg-[#DAF7A6]/35 px-4 py-2" />
+            <div className="mt-[-2rem] h-10 w-14 rounded-2xl bg-[#DAF7A6]/35 px-4 py-2" />
           </div>
           <div className="flex flex-col">
             <motion.div
-              className="z-50  w-32 rounded-2xl bg-[#FFC300] text-center font-bold"
+              className="w-30  z-50 rounded-2xl bg-[#FFC300] text-center font-bold"
               whileHover={{ y: -3 }}
               whileTap={{ y: 7 }}
             >
               <Link href="/blog/productivity">
-                <h4 className="block p-2">Productivity</h4>
+                <h5 className="block p-2">Productivity</h5>
               </Link>
             </motion.div>
-            <div className="mt-[-2rem] h-10 w-32 rounded-2xl bg-[#FFC300]/35 px-4 py-2" />
+            <div className="w-30 mt-[-2rem] h-10 rounded-2xl bg-[#FFC300]/35 px-4 py-2" />
           </div>
           <div className="flex flex-col">
             <motion.div
-              className="z-50  rounded-2xl bg-[#ADD8E6] text-center font-bold"
+              className="w-18  z-50 rounded-2xl bg-[#ADD8E6] text-center font-bold"
               whileHover={{ y: -3 }}
               whileTap={{ y: 7 }}
             >
               <Link href="/blog/coding">
-                <h4 className="block p-2">Coding</h4>
+                <h5 className="block p-2">Coding</h5>
               </Link>
             </motion.div>
-            <div className="mt-[-2rem] h-10 w-20 rounded-2xl bg-[#ADD8E6]/35 px-4 py-2" />
+            <div className="w-18 mt-[-2rem] h-10 rounded-2xl bg-[#ADD8E6]/35 px-4 py-2" />
           </div>
           <div className="flex flex-col">
             <motion.div
-              className="z-50  rounded-2xl bg-[#F6846A] text-center font-bold"
+              className="w-18  z-50 rounded-2xl bg-[#F6846A] text-center font-bold"
               whileHover={{ y: -3 }}
               whileTap={{ y: 7 }}
             >
               <Link href="/blog/trading">
-                <h4 className="block p-2">Trading</h4>
+                <h5 className="block p-2">Trading</h5>
               </Link>
             </motion.div>
-            <div className="mt-[-2rem] h-10 w-20 rounded-2xl bg-[#F6846A]/35 px-4 py-2" />
+            <div className="w-18 mt-[-2rem] h-10 rounded-2xl bg-[#F6846A]/35 px-4 py-2" />
           </div>
         </div>
       </div>
