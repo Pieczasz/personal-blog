@@ -13,7 +13,7 @@ import { api } from "@/trpc/react";
 import { motion } from "framer-motion";
 
 function Life({ children }: { children: React.ReactNode }) {
-  const { data: posts, isLoading, error } = api.post.getLifePosts.useQuery();
+  const { data: posts, isLoading, error } = api.post.getTradingPosts.useQuery();
 
   const router = useRouter();
 

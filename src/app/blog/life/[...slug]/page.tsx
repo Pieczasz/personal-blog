@@ -104,7 +104,7 @@ export default function PostPage({ params }: PostPageProps) {
             key={post.id}
             className="flex h-full w-full flex-col gap-x-1 px-10 duration-200 lg:flex-row lg:px-0"
           >
-            <div className="mt-5 flex w-full flex-col items-center lg:mt-80 lg:w-1/5">
+            <div className="flex w-full flex-col items-center pt-6 lg:mt-80 lg:w-1/5">
               <h5 className="text-center font-bold">Share post:</h5>
               <div ref={scope}>
                 <button
@@ -156,7 +156,7 @@ export default function PostPage({ params }: PostPageProps) {
                 </button>
               </div>
             </div>
-            <div className="max-w-screen py-24 flex w-full flex-col lg:w-4/5">
+            <div className="flex w-full flex-col py-6 lg:w-4/5 lg:py-24">
               <div className="break-words">{HTMLReactParser(post.content)}</div>
             </div>
           </div>
