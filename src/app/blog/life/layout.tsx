@@ -122,7 +122,7 @@ function Life({ children }: { children: React.ReactNode }) {
             type="text"
             name="search"
             id="search"
-            className="focus:ring-transparen bg-whitet w-full p-1 focus:outline-none"
+            className="focus:ring-transparen bg-whitet w-full bg-white p-1 focus:outline-none"
             placeholder="Search through posts"
           />
           <FaSearch className="h-5 w-5 cursor-pointer hover:scale-[1.15]" />
