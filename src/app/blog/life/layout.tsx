@@ -22,14 +22,14 @@ function Life({ children }: { children: React.ReactNode }) {
   return (
     <main className="flex min-h-screen flex-col items-end lg:flex-row">
       {/* Top Bar on Mobile*/}
-      <div className="flex w-full flex-col items-center border-b border-primary/35 lg:hidden">
+      <div className="flex w-full flex-col items-center border-b border-primary/35 bg-white lg:hidden">
         <hr className="w-full" />
-        <div className="my-3 flex w-full items-center justify-center px-4">
+        <div className="my-3 flex w-full items-center justify-center bg-white px-4">
           <input
             type="text"
             name="search"
             id="search"
-            className="w-full p-1 focus:outline-none focus:ring-transparent"
+            className="w-full bg-white p-1 focus:outline-none focus:ring-transparent"
             placeholder="Search through posts"
             onFocus={() => setShowPosts(true)}
           />
@@ -128,7 +128,6 @@ function Life({ children }: { children: React.ReactNode }) {
           <FaSearch className="h-5 w-5 cursor-pointer hover:scale-[1.15]" />
         </div>
         <hr className="w-full border-primary/35" />
-
         <div className=" flex w-full flex-col border-b border-y-primary/35 py-5">
           <div className="mb-4 flex w-full items-center justify-center gap-x-4 px-2">
             <div className="flex flex-col">
