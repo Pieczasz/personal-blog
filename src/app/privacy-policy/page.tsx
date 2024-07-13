@@ -3,13 +3,13 @@ function PrivacyPolicy() {
     <main className="flex min-h-screen flex-col items-center justify-center text-white">
       <div className="m-auto flex max-w-screen-lg flex-col items-center justify-center text-left">
         <div className="flex flex-col ">
-          <div className="flex flex-col gap-y-6 px-10 py-16">
-            <h2 className="font-bold">Why I do what I do?</h2>
-            <p>
+          <div className="flex flex-col gap-y-6 px-10 py-16 text-black">
+            <h2 className="py-4 font-bold">Privacy Policy</h2>
+            <p className="text-xl">
               By visiting BartekPiekarz.com, you are consenting to our privacy
               policy.
             </p>
-            <h4>Overview</h4>
+            <h3 className="py-4 font-bold">Overview</h3>
             {/* //TODO: Bartek Piekarz Holdings LLC - name of company */}
             <p className="text-xl">
               BartekPiekarz.com is committed to protecting your privacy online.
@@ -28,7 +28,7 @@ function PrivacyPolicy() {
               the site. By using the Site or Service, you agree to this Privacy
               Policy, without modification, and acknowledge reading it.
             </p>
-            <h4>Cookies</h4>
+            <h3 className="py-4 font-bold">Cookies</h3>
             {/* //TODO: Bartek Piekarz Holdings LLC - name of company */}
             <p className="text-xl">
               A cookie is a file containing an identifier (a string of letters
@@ -80,7 +80,7 @@ function PrivacyPolicy() {
               impact on the functions of many websites, including our Site. Some
               features of the Site may cease to be available to you.
             </p>
-            <h4>Advertising</h4>
+            <h3 className="py-4 font-bold">Advertising</h3>
             {/* //TODO: Bartek Piekarz Holdings LLC - name of company */}
             <p className="text-xl">
               By using this Site, you consent to the use of such cookies and the
@@ -107,7 +107,9 @@ function PrivacyPolicy() {
               partners track your behavior using cookies, click the ad
               preferences icon. (Available in the EU.)
             </p>
-            <h4>Affiliated sites, linked sites and advertisements</h4>
+            <h3 className="py-4 font-bold">
+              Affiliated sites, linked sites and advertisements
+            </h3>
             <p className="text-xl">
               BartekPiekarz.com expects its partners, advertisers and affiliates
               to respect the privacy of our users. Be aware, however, that third
@@ -145,7 +147,9 @@ function PrivacyPolicy() {
               parties. Such activities are beyond the control of
               BartekPiekarz.com and this policy.
             </p>
-            <h4>Additional Rights OF EEA (European Economic Area) Residents</h4>
+            <h3 className="py-4 font-bold">
+              Additional Rights OF EEA (European Economic Area) Residents
+            </h3>
             <p className="text-xl">
               If you are a resident of a country in the EEA, you have the
               rights, among others, to:
@@ -171,7 +175,7 @@ function PrivacyPolicy() {
               <br />
               {/* //TODO: add here email */}
             </p>
-            <h4>Changes to this Policy</h4>
+            <h3 className="py-4 font-bold">Changes to this Policy</h3>
             <p className="text-xl">
               BartekPiekarz.com reserves the right to change this policy at any
               time. Please check this page periodically for changes. Your
@@ -182,7 +186,7 @@ function PrivacyPolicy() {
               information was collected.
             </p>
           </div>
-          <h4>Contact</h4>
+          <h3 className="py-4 font-bold">Contact</h3>
           <p className="text-xl">
             If you have any questions about this Privacy Policy, or the
             practices of this Site, please contact us at:
