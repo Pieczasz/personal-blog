@@ -3,7 +3,7 @@ const AboutHero = () => {
     <div className="flex w-full flex-col lg:flex-row">
       <div className="w-full items-center justify-center px-10 py-20 ">
         <div className="m-auto flex max-w-5xl flex-col">
-          <h2 className="mb-6 text-left text-4xl font-bold">
+          <h2 className="mb-6 text-left  font-bold">
             Hi, I&apos;m Bartek Piekarz
           </h2>
           <div className="flex flex-col gap-y-6">

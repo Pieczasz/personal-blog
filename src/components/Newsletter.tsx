@@ -106,10 +106,8 @@ const Newsletter = () => {
 
   return (
     <div className="m-auto flex w-full flex-col items-center px-10 py-24">
-      <h2 className="text-center text-3xl font-bold">
-        Stay updated and sign in
-      </h2>
-      <h2 className="pt-1 text-3xl font-bold">for my newsletter</h2>
+      <h2 className="text-center font-bold">Stay updated and sign in</h2>
+      <h2 className="pt-1 font-bold">for my newsletter</h2>
       <div
         id="custom-substack-embed"
         className="max-w-[45ch] grid-cols-2 place-content-center place-items-center items-center justify-center gap-4 text-center md:grid md:grid-cols-1 "

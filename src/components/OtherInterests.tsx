@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const OtherInterests = () => {
   return (
     <div className="my-12 flex w-full flex-col items-center justify-center gap-y-16">
-      <h2 className="pb-8 text-4xl font-bold">My Other Interests</h2>
+      <h2 className="pb-8  font-bold">My Other Interests</h2>
       <div className="flex flex-col gap-y-8 px-10 lg:flex-row lg:gap-x-10">
         <motion.div
           className="flex w-full flex-col gap-y-4 rounded-2xl bg-[#DAF7A6]/65 p-6 lg:w-1/3"
@@ -14,7 +14,7 @@ const OtherInterests = () => {
           initial={{ rotate: -4 }}
           animate={{ rotate: -4 }}
         >
-          <h3 className="text-2xl font-bold">Dancing</h3>
+          <h3 className=" font-bold">Dancing</h3>
           <p className="text-xl">
             Dancing was a big part of my life. I used to dance between the ages
             of 8 and 16. I stopped because many people with whom I was dancing
@@ -29,7 +29,7 @@ const OtherInterests = () => {
           initial={{ rotate: 4 }}
           animate={{ rotate: 4 }}
         >
-          <h3 className="text-2xl font-bold">Acrobatic</h3>
+          <h3 className=" font-bold">Acrobatic</h3>
           <p className="text-xl">
             Similarly to dancing, I used to attend acrobatic classes. I dropped
             out at the same time because of a lack of time. I can still probably
@@ -43,7 +43,7 @@ const OtherInterests = () => {
           initial={{ rotate: -7 }}
           animate={{ rotate: -7 }}
         >
-          <h3 className="text-2xl font-bold">Swimming</h3>
+          <h3 className=" font-bold">Swimming</h3>
           <p className="text-xl">
             After I dropped dancing and acrobatics, I started swimming. I
             attended swimming classes for 3 years and then dropped out. Not
@@ -60,7 +60,7 @@ const OtherInterests = () => {
           initial={{ rotate: -3 }}
           animate={{ rotate: -3 }}
         >
-          <h3 className="text-2xl font-bold">Architecture</h3>
+          <h3 className=" font-bold">Architecture</h3>
           <p className="text-xl">
             Programming and IT paths weren&apos;t my first choice. Actually, I
             really wanted to be an architect. The only problem was that in
@@ -75,7 +75,7 @@ const OtherInterests = () => {
           initial={{ rotate: -2 }}
           animate={{ rotate: -2 }}
         >
-          <h3 className="text-2xl font-bold">Guitar</h3>
+          <h3 className=" font-bold">Guitar</h3>
           <p className="text-xl">
             At the same time, when I was dancing and attending acrobatic
             classes, I also started to play the guitar. I was taking guitar
@@ -93,7 +93,7 @@ const OtherInterests = () => {
           initial={{ rotate: 7 }}
           animate={{ rotate: 7 }}
         >
-          <h3 className="text-2xl font-bold">Video Editing</h3>
+          <h3 className=" font-bold">Video Editing</h3>
           <p className="text-xl">
             First, my contact with IT was video editing. Before high school, I
             wanted to start a YouTube channel, and because of that, I started

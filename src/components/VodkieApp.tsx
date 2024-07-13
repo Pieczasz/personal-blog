@@ -19,9 +19,7 @@ const VodkieApp = () => {
       </div>
       <div className="w-full flex-col items-center justify-center px-10 lg:w-1/2 lg:flex-row">
         <div className="m-auto flex max-w-sm flex-col">
-          <h1 className="mb-6 text-4xl font-bold">
-            Download Vodkie, my first app
-          </h1>
+          <h2 className="mb-6  font-bold">Download Vodkie, my first app</h2>
           <p className="text-xl">
             Have you ever thought of which vodka you should try? Or maybe you
             just wanted to share your opinion about some drinks with someone?

@@ -2,7 +2,7 @@ const AboutMeDescription = () => {
   return (
     <div className="flex flex-col ">
       <div className="flex flex-col gap-y-6 px-10 py-16">
-        <h2 className="text-4xl font-bold">Why I do what I do?</h2>
+        <h2 className=" font-bold">Why I do what I do?</h2>
         <p className="text-xl">
           I just feel better when I am productive. I really love coding,
           trading, training, and every aspect of my life.
@@ -26,7 +26,7 @@ const AboutMeDescription = () => {
       </div>
 
       <div className="flex flex-col gap-y-6 px-10 py-16">
-        <h2 className="text-4xl font-bold">About Me</h2>
+        <h2 className=" font-bold">About Me</h2>
         <p className="text-xl">
           Here you can see a few random facts about me...
         </p>

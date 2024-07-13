@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className="bg-black py-16">
       <MaxWidthWrapper className="flex flex-col items-center justify-center space-y-3">
         <Link href="/" className="group relative">
-          <h2 className="text-lg font-bold text-white transition-all duration-300">
+          <h5 className="font-bold text-white transition-all duration-300">
             Bartek Piekarz
-          </h2>
+          </h5>
           <span className="absolute bottom-0 left-0 h-0.5 w-full scale-x-0 transform bg-gray-500 transition-all duration-500 group-hover:scale-x-100" />
         </Link>
 

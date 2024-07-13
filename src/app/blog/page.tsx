@@ -97,15 +97,13 @@ function Blog() {
     <main className="flex min-h-screen flex-col">
       <div className="flex-col gap-y-10 lg:flex">
         <div className="m-auto flex max-w-screen-lg flex-col gap-y-10 px-10 py-24 text-center">
-          <h3 className="px-4 text-2xl font-bold underline">
-            JUST FU****G DO IT
-          </h3>
+          <h3 className="px-4 font-bold underline">JUST FU****G DO IT</h3>
           <h1 className={`font-weight-[500] px-4 ${LoraFont.className}`}>
             “Waste no more time arguing about what a good man should be. Be
             one.”
           </h1>
           <h2 className="font-weight-[500]">― Marcus Aurelius , Meditations</h2>
-          <h3 className="px-4 text-2xl">
+          <h3 className="px-4">
             This quote wrote by Marcus Aurelius should led you to think that You
             don&apos;t need to be as other would like you. What You should
             understand is that you should try to be better version of yourself.
@@ -125,7 +123,7 @@ function Blog() {
                       <Card>
                         <CardContent className="flex h-[480px] flex-col items-center justify-center gap-y-6 rounded-xl p-6 duration-150 ease-out hover:bg-gray-200 hover:bg-opacity-35">
                           <h2
-                            className={`text-4xl font-semibold ${LoraFont.className}`}
+                            className={` font-semibold ${LoraFont.className}`}
                           >
                             {blogLink.title}
                           </h2>
