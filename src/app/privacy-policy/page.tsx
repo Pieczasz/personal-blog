@@ -10,7 +10,6 @@ function PrivacyPolicy() {
               policy.
             </p>
             <h3 className="py-4 font-bold">Overview</h3>
-            {/* //TODO: Bartek Piekarz Holdings LLC - name of company */}
             <p className="text-xl">
               BartekPiekarz.com is committed to protecting your privacy online.
               This Privacy Policy describes the information we collect through
@@ -29,7 +28,6 @@ function PrivacyPolicy() {
               Policy, without modification, and acknowledge reading it.
             </p>
             <h3 className="py-4 font-bold">Cookies</h3>
-            {/* //TODO: Bartek Piekarz Holdings LLC - name of company */}
             <p className="text-xl">
               A cookie is a file containing an identifier (a string of letters
               and numbers) that is sent by a web server to a web browser and is
@@ -47,14 +45,17 @@ function PrivacyPolicy() {
               <br />
               We use cookies for the following purposes:
               <br />
-              (a) (authentication – we use cookies to identify you when you
-              visit our website and as you navigate our website); (c)
-              (personalization – we use cookies (to store information about your
-              preferences and to personalize the website for you); (e)
-              (advertising – we use cookies (to help us to display
-              advertisements that will be relevant to you); and (f) (analysis –
-              we use cookies (to help us to analyze the use and performance of
-              our website and services);
+              (a) authentication – we use cookies to identify you when you visit
+              our website and as you navigate our website;
+              <br />
+              (b) personalization – we use cookies to store information about
+              your preferences and to personalize the website for you;
+              <br />
+              (c) advertising – we use cookies to help us to display
+              advertisements that will be relevant to you; and
+              <br />
+              (d) analysis – we use cookies to help us to analyze the use and
+              performance of our website and services;
               <br />
               We use Google Analytics to analyze the use of our website. Google
               Analytics gathers information about website use by means of
@@ -68,24 +69,32 @@ function PrivacyPolicy() {
               information about blocking and deleting cookies via these links:
               <br />
               (a) https://support.google.com/chrome/answer/95647?hl=en (Chrome);
+              <br />
               (b)
-              https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences(Firefox);
+              https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences
+              (Firefox);
+              <br />
               (c) http://www.opera.com/help/tutorials/security/cookies/ (Opera);
+              <br />
               (d)
               https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies
-              (Internet Explorer); (e) https://support.apple.com/kb/PH21411
-              (Safari); and (f)
+              (Internet Explorer);
+              <br />
+              (e) https://support.apple.com/kb/PH21411 (Safari); and
+              <br />
+              (f)
               https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy
-              (Edge). Please note that blocking cookies may have a negative
-              impact on the functions of many websites, including our Site. Some
-              features of the Site may cease to be available to you.
+              (Edge).
+              <br />
+              Please note that blocking cookies may have a negative impact on
+              the functions of many websites, including our Site. Some features
+              of the Site may cease to be available to you.
             </p>
             <h3 className="py-4 font-bold">Advertising</h3>
-            {/* //TODO: Bartek Piekarz Holdings LLC - name of company */}
             <p className="text-xl">
               By using this Site, you consent to the use of such cookies and the
               sharing of data captured by such cookies with Google, and our
-              other third party partners.You can view, delete or add interest
+              other third party partners. You can view, delete or add interest
               categories associated with your browser by visiting:
               https://adssettings.google.com. You can also opt out of the
               network cookie using those settings or using the Network
@@ -117,15 +126,14 @@ function PrivacyPolicy() {
               content providers accessible through our site, may have their own
               privacy and data collection policies and practices. For example,
               during your visit to our site you may link to, or view as part of
-              a frame onBartekPiekarz.com pages, certain content that is
-              actually created or hosted by a third party. Also,
-              throughBartekPiekarz.com you may be introduced to, or be able to
-              access, information, Web sites, features, contests or sweepstakes
-              offered by other parties. BartekPiekarz.com is not responsible for
-              the actions or policies of such third parties. You should check
-              the applicable privacy policies of those third parties when
-              providing information on a feature or page operated by a third
-              party.
+              a frame on BartekPiekarz.com pages, certain content that is
+              actually created or hosted by a third party. Also, through
+              BartekPiekarz.com you may be introduced to, or be able to access,
+              information, Web sites, features, contests or sweepstakes offered
+              by other parties. BartekPiekarz.com is not responsible for the
+              actions or policies of such third parties. You should check the
+              applicable privacy policies of those third parties when providing
+              information on a feature or page operated by a third party.
               <br />
               While on our site, our advertisers, promotional partners or other
               third parties may use cookies or other technology to attempt to
@@ -135,7 +143,7 @@ function PrivacyPolicy() {
               determine whether you have seen a particular advertisement before.
               Other features available on our site may offer services operated
               by third parties and may use cookies or other technology to gather
-              information.BartekPiekarz.com does not control the use of this
+              information. BartekPiekarz.com does not control the use of this
               technology by third parties or the resulting information, and are
               not responsible for any actions or policies of such third parties.
               <br />
@@ -173,7 +181,7 @@ function PrivacyPolicy() {
               residence, your place of work or the place of the alleged
               infringement. Please contact with us via email at
               <br />
-              {/* //TODO: add here email */}
+              contact@bartekpiekarz.com
             </p>
             <h3 className="py-4 font-bold">Changes to this Policy</h3>
             <p className="text-xl">
@@ -191,7 +199,7 @@ function PrivacyPolicy() {
             If you have any questions about this Privacy Policy, or the
             practices of this Site, please contact us at:
           </p>
-          {/* //TODO: add here email */}
+          <p className="text-xl">contact@bartekpiekarz.com</p>
         </div>
       </div>
     </main>
